@@ -5,7 +5,7 @@ This project is an online career services platform that connects job-seeking stu
 
 ## Members and Roles
 1. Christina Strutynski 40157747
-2. 
+2. Mario Andrade 40264599
 3. 
 4. 
 5. 
