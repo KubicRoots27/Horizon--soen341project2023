@@ -8,7 +8,7 @@ This project is an online career services platform that connects job-seeking stu
 2. Mario Andrade 40264599
 3. Bachar Alshabab 40185132
 4. Sarmad Sabbagh 40088089
-5. 
+5. Patrick Kubicki 40100484
 
 front end, back end, full stack 
 
