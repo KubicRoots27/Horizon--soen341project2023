@@ -6,8 +6,8 @@ This project is an online career services platform that connects job-seeking stu
 ## Members and Roles
 1. Christina Strutynski 40157747
 2. Mario Andrade 40264599
-3. 
-4. 
+3. Bachar Alshabab 40185132
+4. Sarmad Sabbagh 40088089
 5. 
 
 front end, back end, full stack 
