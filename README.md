@@ -20,7 +20,7 @@ front end, back end, full stack
 ## User stories
 1. As a student, I want to be able to create an account and log in to the platform so that I can access job postings and create my own profile.
 2. As an employer, I want to be able to post job openings on the platform and review candidate applications so that I can find suitable candidates for my company.
-3. As a student, I want to be able to browse job postings and apply to them so that I can find potential job opportunities.
+3. As a recruiter, I want to be able to create an account and search for employees that I can link with my clients.
 4. As an admin, I want to be able to manage user profiles and postings on the platform so that I can ensure that the platform is running smoothly.
 
 ## Task Breakdown
