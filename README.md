@@ -9,6 +9,7 @@ This project is an online career services platform that connects job-seeking stu
 3. Bachar Alshabab 40185132
 4. Sarmad Sabbagh 40088089
 5. Patrick Kubicki 40100484
+6. Arshpreet Singh 40172137
 
 front end, back end, full stack 
 
