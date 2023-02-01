@@ -42,7 +42,7 @@ front end, back end, full stack
 | 12 | 2 | Patrick | Implement the functionality to for employers to create and publish job postings |
 | 13 | 2 | Patrick | Implement the functionality to for employers to edit and remove job postings|
 | 14 | 2 | Patrick | Implement the functionality for employers to see their post viewership |
-| 15 | 3 |Sarmad | Designing engaging and responsive landing pages  |
-| 16 | 3 |Sarmad | Designing login/signup functionality  |
+| 15 | 3 |Sarmad | Designing Home Page/Contact information page user Interfaces  |
+| 16 | 3 |Sarmad | Designing login/signup user Interface  |
 ## Plan for next Sprint
 
