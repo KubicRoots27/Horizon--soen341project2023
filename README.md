@@ -4,12 +4,12 @@ Website designed for students to give them acccess to a platform that provides c
 This project is an online career services platform that connects job-seeking students with employers. Candidates can create and update their portfolio, while employers can post job openings. Users can access the platform through a PC or mobile device with internet access. Users must create an account and log in with their email and password to use the platform. Employers can review candidate applications and students can view and apply to job postings. The platform is managed by an admin and includes security measures to protect login credentials. Users will receive notifications when they are called for an interview or when a candidate applies to their job offer.
 
 ## Members and Roles
-1. Christina Strutynski 40157747
-2. Mario Andrade 40264599
-3. Bachar Alshabab 40185132
-4. Sarmad Sabbagh 40088089
-5. Patrick Kubicki 40100484
-6. Arshpreet Singh 40172137
+1. Christina Strutynski 40157747 Javascript
+2. Mario Andrade 40264599 CSS
+3. Bachar Alshabab 40185132 CSS
+4. Sarmad Sabbagh 40088089 CSS
+5. Patrick Kubicki 40100484 Javascript
+6. Arshpreet Singh 40172137 Javascript
 
 front end, back end, full stack 
 
