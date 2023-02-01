@@ -32,6 +32,9 @@ front end, back end, full stack
 | 3 | 1 | Christina | Implement the functionality for logging in to existing student accounts |
 | 4 | 1 | Christina | Implement the functionality for creating and editing student profiles |
 | 5 | 1 | Christina | Test the account creation, login, and profile creation/editing functionality |
-
+| 6 | 2 | Mario | Design layout for the creation of a job post |
+| 7 | 2 | Mario | Design layout for the job post |
+| 9 | 2 | Mario | Design layout of the "my job postings" page |
+| 10 | 2 | FILL NAME | Implement the functionality to apply to jobs |
 ## Plan for next Sprint
 
