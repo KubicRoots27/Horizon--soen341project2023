@@ -36,5 +36,7 @@ front end, back end, full stack
 | 7 | 2 | Mario | Design layout for the job post |
 | 9 | 2 | Mario | Design layout of the "my job postings" page |
 | 10 | 2 | FILL NAME | Implement the functionality to apply to jobs |
+| 11 | 3 |Sarmad | Designing engaging and responsive landing pages  |
+| 12 | 3 |Sarmad | Designing login/signup functionality  |
 ## Plan for next Sprint
 
