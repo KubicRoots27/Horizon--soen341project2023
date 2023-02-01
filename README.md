@@ -23,6 +23,8 @@ front end, back end, full stack
 2. As an employer, I want to be able to post job openings on the platform and review candidate applications so that I can find suitable candidates for my company.
 3. As a recruiter, I want to be able to create an account and search for employees that I can link with my clients.
 4. As an admin, I want to be able to manage user profiles and postings on the platform so that I can ensure that the platform is running smoothly.
+5. As a student, I want to be able to save job postings to my favorites to be able to see any changes made.
+6. As a student, I want to be able to apply for job postings and let the employer aware of my interest.
 
 ## Task Breakdown
 | Task | Corresponding Story | Person assigned | Task Description |
@@ -35,8 +37,12 @@ front end, back end, full stack
 | 6 | 2 | Mario | Design layout for the creation of a job post |
 | 7 | 2 | Mario | Design layout for the job post |
 | 9 | 2 | Mario | Design layout of the "my job postings" page |
-| 10 | 2 | FILL NAME | Implement the functionality to apply to jobs |
-| 11 | 3 |Sarmad | Designing engaging and responsive landing pages  |
-| 12 | 3 |Sarmad | Designing login/signup functionality  |
+| 10 | 6 | Patrick | Implement the functionality for applicants to apply to jobs postings |
+| 11 | 5 | Patrick | Implement the functionality for applicants to save a job posting to their favorites|
+| 12 | 2 | Patrick | Implement the functionality to for employers to create and publish job postings |
+| 13 | 2 | Patrick | Implement the functionality to for employers to edit and remove job postings|
+| 14 | 2 | Patrick | Implement the functionality for employers to see their post viewership |
+| 15 | 3 |Sarmad | Designing engaging and responsive landing pages  |
+| 16 | 3 |Sarmad | Designing login/signup functionality  |
 ## Plan for next Sprint
 
