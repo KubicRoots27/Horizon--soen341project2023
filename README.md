@@ -15,7 +15,7 @@ front end, back end, full stack
 
 ## Project approach and technologies
 - Web application using javascript (nodeJS) 
-- Framework: React or Vue
+- Framework: NextJS
 - CSS or Tailwind
 
 ## User stories
