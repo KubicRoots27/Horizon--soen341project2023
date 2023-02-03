@@ -5,11 +5,11 @@ This project is an online career services platform that connects job-seeking stu
 
 ## Members and Roles
 1. Christina Strutynski 40157747 (Javascript) Github: electricalgirl
-2. Mario Andrade 40264599 (CSS) 
-3. Bachar Alshabab 40185132 (CSS)
-4. Sarmad Sabbagh 40088089 (CSS)
-5. Patrick Kubicki 40100484 (Javascript) Github: kubicroots27
-6. Arshpreet Singh 40172137 (Javascript)
+2. Mario Andrade, 40264599 (CSS) Github: maante
+3. Bachar Alshabab, 40185132 (CSS) Github: bashar9889
+4. Sarmad Sabbagh, 40088089 (CSS) Github: Sred47
+5. Patrick Kubicki, 40100484 (Javascript) Github: KubicRoots27
+6. Arshpreet Singh, 40172137 (Javascript) Github: Ashx11
 
 front end, back end, full stack 
 
@@ -44,5 +44,11 @@ front end, back end, full stack
 | 14 | 2 | Patrick | Implement the functionality for employers to see their post viewership |
 | 15 | 3 |Sarmad | Designing Home Page/Contact information page user Interfaces  |
 | 16 | 3 |Sarmad | Designing login/signup user Interface  |
+| 17 | 4 | Bachar | Design homepage/ UI |
+| 18 | 4 | Bachar | Design and implement the search bottom and its functionailty|
+| 19 | 4 | Arshpreet | Managing the list of users and postings as an admin |
+| 20 | 4 | Arshpreet | Managing the acount credentials/security for the users as an admin|
+| 21 | 4 | Arshpreet | Managing and providing Technical support to users  |
+
 ## Plan for next Sprint
 
