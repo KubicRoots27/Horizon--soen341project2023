@@ -44,5 +44,7 @@ front end, back end, full stack
 | 14 | 2 | Patrick | Implement the functionality for employers to see their post viewership |
 | 15 | 3 |Sarmad | Designing Home Page/Contact information page user Interfaces  |
 | 16 | 3 |Sarmad | Designing login/signup user Interface  |
+| 17 | 4 | Bachar | Design homepage/ UI |
+| 18 | 4 | Bachar | Design and implement the search bottom and its functionailty|
 ## Plan for next Sprint
 
