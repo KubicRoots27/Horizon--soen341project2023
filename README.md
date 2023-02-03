@@ -5,7 +5,7 @@ This project is an online career services platform that connects job-seeking stu
 
 ## Members and Roles
 1. Christina Strutynski 40157747 (Javascript) Github: electricalgirl
-2. Mario Andrade 40264599 (CSS) Github:
+2. Mario Andrade 40264599 (CSS) Github: maante
 3. Bachar Alshabab 40185132 (CSS) Github:
 4. Sarmad Sabbagh 40088089 (CSS) Github: Sred47
 5. Patrick Kubicki 40100484 (Javascript) Github: KubicRoots27
