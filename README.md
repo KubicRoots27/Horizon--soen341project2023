@@ -46,5 +46,9 @@ front end, back end, full stack
 | 16 | 3 |Sarmad | Designing login/signup user Interface  |
 | 17 | 4 | Bachar | Design homepage/ UI |
 | 18 | 4 | Bachar | Design and implement the search bottom and its functionailty|
+| 19 | 4 | Arshpreet | Managing the list of users  as an admin |
+| 20 | 4 | Arshpreet | Managing the acount credentials/security for the users as an admin|
+| 21 | 4 | Arshpreet | Managing and providing Technical support to users  |
+
 ## Plan for next Sprint
 
