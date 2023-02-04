@@ -1,31 +1,43 @@
 import React from "react";
-import { Formik } from "formik";
+import { Formik, Field, Form } from "formik";
 
 const Login = () => {
   return (
     <div>
-      <h1>Login page</h1>
-      <div className="">
-        <div className="w-fit mx-auto">
-          <form>
-            <h2>Username</h2>
-            <div>
-              <input
-                type="text"
-                className="outline-2 outline-slate-400 bg-slate-200 rounded-md"
-              ></input>
-            </div>
+      <div className="h-screen bg-pastel_green">
+        <div className="w-fit mx-auto pt-96">
+          <h1 className="text-3xl font-bold pb-3">Login</h1>
 
-            <h2>Password</h2>
-            <div>
-              <input
-                type="text"
-                className="outline-2 outline-slate-400 bg-slate-200 rounded-md"
-              ></input>
-            </div>
+          <Formik
+            initialValues={{ username: "", password: "" }}
+            onSubmit={(values) => {
+              console.log(values);
+            }}
+          >
+            <Form>
+              <div className="pb-3">
+                <Field
+                  name="username"
+                  placeholder="Username"
+                  type="text"
+                  className="outline-2 outline-slate-400 bg-slate-200 rounded-md p-1"
+                />
+              </div>
 
-            <button className="bg-slate-400 rounded-md mt-3 px-3">Login</button>
-          </form>
+              <div className="pb-3">
+                <Field
+                  name="password"
+                  placeholder="Password"
+                  type="password"
+                  className="outline-2 outline-slate-400 bg-slate-200 rounded-md p-1"
+                />
+              </div>
+
+              <button type="submit" className="bg-slate-400 rounded-md px-3">
+                Login
+              </button>
+            </Form>
+          </Formik>
         </div>
       </div>
     </div>
