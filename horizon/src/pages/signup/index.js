@@ -1,7 +1,9 @@
 import React from "react";
 import { Formik, Field, Form } from "formik";
+import { useRouter } from "next/router";
 
 const Signup = () => {
+  const router = useRouter();
   return (
     <div>
       <div className="h-screen bg-pastel_green">
@@ -9,9 +11,27 @@ const Signup = () => {
           <h1 className="text-3xl font-bold pb-3">Signup</h1>
 
           <Formik
-            initialValues={{ fname: "", lname: "" , email: "", password: "", password2: ""}}
-            onSubmit={(values) => {
-              console.log(values);
+            initialValues={{
+              fname: "",
+              lname: "",
+              email: "",
+              password: "",
+              password2: "",
+            }}
+            onSubmit={async (values) => {
+              const response = await fetch("/api/auth/signup", {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/json",
+                },
+                body: JSON.stringify(values),
+              });
+
+              if (response.ok) {
+                router.push("/login");
+              } else {
+                alert(response.statusText);
+              }
             }}
           >
             <Form>

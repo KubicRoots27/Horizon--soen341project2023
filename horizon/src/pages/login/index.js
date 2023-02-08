@@ -1,7 +1,10 @@
 import React from "react";
 import { Formik, Field, Form } from "formik";
+import { useSession, signIn, signOut } from "next-auth/react";
+import { useRouter } from "next/router";
 
 const Login = () => {
+  const router = useRouter();
   return (
     <div>
       <div className="h-screen bg-pastel_green">
@@ -10,15 +13,25 @@ const Login = () => {
 
           <Formik
             initialValues={{ username: "", password: "" }}
-            onSubmit={(values) => {
-              console.log(values);
+            onSubmit={async (values) => {
+              await signIn("credentials", {
+                email: values.email,
+                password: values.password,
+                redirect: false,
+              }).then((res) => {
+                if (res.error) {
+                  alert(res.error);
+                } else {
+                  router.push("/profile");
+                }
+              });
             }}
           >
             <Form>
               <div className="pb-3">
                 <Field
-                  name="username"
-                  placeholder="Username"
+                  name="email"
+                  placeholder="Email"
                   type="text"
                   className="outline-2 outline-slate-400 bg-slate-200 rounded-md p-1"
                 />
