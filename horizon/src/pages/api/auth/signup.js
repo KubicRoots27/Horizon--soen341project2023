@@ -12,7 +12,7 @@ export default async function handler(req, res) {
     }
 
     // Destructure the request body
-    let { fname, lname, email, password } = req.body;
+    let { fname, lname, email, accountType, password } = req.body;
 
     // Check duplicate user
     const checkexisting = await Users.findOne({ email: req.body.email });
@@ -20,12 +20,14 @@ export default async function handler(req, res) {
       return res.status(400).json({ error: "Email already exists" });
     }
 
+
     // Create user, hash password, and save to database
     Users.create(
       {
         fname,
         lname,
         email,
+        accountType,
         password: await hash(password, 12),
       },
       function (err, data) {

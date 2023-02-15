@@ -15,6 +15,7 @@ const Signup = () => {
               fname: "",
               lname: "",
               email: "",
+              accountType: "",
               password: "",
               password2: "",
             }}
@@ -60,6 +61,13 @@ const Signup = () => {
                   type="text"
                   className="outline-2 outline-slate-400 bg-slate-200 rounded-md p-1"
                 />
+              </div>
+
+              <div className="pb-3">
+                <Field as="select" name="accountType">
+                  <option value="student">Student</option>
+                  <option value="employer">Employer</option>
+                </Field>
               </div>
 
               <div className="pb-3">
