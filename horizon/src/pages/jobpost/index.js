@@ -1,52 +1,38 @@
 import 'src/styles/globals.css'
 
 const JobPostForm = () => (
-    <div className="w-64 mx-auto mt-10">
-      <h1 className="text-3xl font-medium text-center">Job Post</h1>
-      <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
-        <div className="mb-4">
-          <label className="block text-gray-700 font-medium mb-2" htmlFor="jtitle">
-            Job Title
-          </label>
-          <input
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            id="jtitle"
-            type="text"
-            placeholder="Enter job title"
-          />
+    <div class="flex min-h-screen w-screen flex-col justify-center overflow-hidden bg-gray-50 py-6 sm:py-12">
+  <div class="relative bg-white px-6 pt-10 pb-8 shadow-xl ring-1 ring-gray-900/5">
+    <div class="mx-auto max-w-md">
+      <p class="text-center text-4xl">Job Post</p>
+      <div class="divide-y divide-gray-300/50">
+        <div class="space-y-6 py-8 text-base leading-7 text-gray-600">
+          <div class="w-full max-w-xl">
+            <form class="mb-4 rounded bg-white px-8 pt-6 pb-8">
+              <div class="mb-4">
+                <label class="mb-2 block w-96 text-sm font-bold text-gray-700" for="jtitle"> Job Title </label>
+                <input class="focus:shadow-outline w-full appearance-none rounded border py-2 px-3 leading-tight text-gray-700 shadow focus:outline-none" id="jtitle" type="text" placeholder="Enter job title" required />
+              </div>
+              <div class="mb-6">
+                <label class="mb-2 block text-sm font-bold text-gray-700" for="jchar"> Job Characteristics </label>
+                <textarea id="jchar" rows="4" class="focus:shadow-outline w-full resize-none appearance-none rounded border py-2 px-3 leading-tight text-gray-700 shadow focus:outline-none" id="" type="text" placeholder="Enter job characteristics" required></textarea>
+              </div>
+              <div class="mb-6">
+                <label class="mb-2 block text-sm font-bold text-gray-700" for="jdescription"> Job Description </label>
+                <textarea id="jdescription" rows="6" class="focus:shadow-outline w-full resize appearance-none rounded border py-2 px-3 leading-tight text-gray-700 shadow focus:outline-none" id="jdescription" type="text" placeholder="Enter job characteristics" required></textarea>
+              </div>
+              <div class="flex items-center justify-between">
+                <button class="focus:shadow-outline rounded bg-red-500 py-2 px-4 font-bold text-white hover:bg-red-700 focus:outline-none" type="button" id="cancel">Cancel</button>
+                <button class="focus:shadow-outline rounded bg-blue-500 py-2 px-4 font-bold text-white hover:bg-blue-700 focus:outline-none" type="button" id="submit">Post</button>
+              </div>
+            </form>
+          </div>
         </div>
-        <div className="mb-4">
-          <label className="block text-gray-700 font-medium mb-2" htmlFor="jchar">
-            Job Characteristics
-          </label>
-          <input
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            id="jchar"
-            type="text"
-            placeholder="Enter job characteristics"
-          />
-        </div>
-        <div className="mb-4">
-          <label className="block text-gray-700 font-medium mb-2" htmlFor="jdescription">
-            Job Description
-          </label>
-          <textarea
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            id="jdescription"
-            rows="5"
-            placeholder="Enter job description"
-          />
-        </div>
-        <div className="flex items-center justify-center">
-          <button
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-            type="submit"
-          >
-            Submit
-          </button>
-        </div>
-      </form>
+      </div>
     </div>
+  </div>
+</div>
+
   )
   
   export default JobPostForm
