@@ -15,11 +15,11 @@ const JobPostForm = () => (
               </div>
               <div class="mb-6">
                 <label class="mb-2 block text-sm font-bold text-gray-700" for="jchar"> Job Characteristics </label>
-                <textarea id="jchar" rows="4" class="focus:shadow-outline w-full resize-none appearance-none rounded border py-2 px-3 leading-tight text-gray-700 shadow focus:outline-none" id="" type="text" placeholder="Enter job characteristics" required></textarea>
+                <textarea id="jchar" rows="4" class="focus:shadow-outline w-full resize-none appearance-none rounded border py-2 px-3 leading-tight text-gray-700 shadow focus:outline-none" type="text" placeholder="Enter job characteristics" required></textarea>
               </div>
               <div class="mb-6">
                 <label class="mb-2 block text-sm font-bold text-gray-700" for="jdescription"> Job Description </label>
-                <textarea id="jdescription" rows="6" class="focus:shadow-outline w-full resize appearance-none rounded border py-2 px-3 leading-tight text-gray-700 shadow focus:outline-none" id="jdescription" type="text" placeholder="Enter job characteristics" required></textarea>
+                <textarea id="jdescription" rows="6" class="focus:shadow-outline w-full resize appearance-none rounded border py-2 px-3 leading-tight text-gray-700 shadow focus:outline-none" type="text" placeholder="Enter job characteristics" required></textarea>
               </div>
               <div class="flex items-center justify-between">
                 <button class="focus:shadow-outline rounded bg-red-500 py-2 px-4 font-bold text-white hover:bg-red-700 focus:outline-none" type="button" id="cancel">Cancel</button>
