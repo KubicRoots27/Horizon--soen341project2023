@@ -1,3 +1,5 @@
+import 'src/styles/globals.css'
+
 const JobPostForm = () => (
     <div className="w-64 mx-auto mt-10">
       <h1 className="text-3xl font-medium text-center">Job Post</h1>
