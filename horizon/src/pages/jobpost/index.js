@@ -32,7 +32,6 @@ const JobPostForm = () => (
     </div>
   </div>
 </div>
-
   )
   
   export default JobPostForm
