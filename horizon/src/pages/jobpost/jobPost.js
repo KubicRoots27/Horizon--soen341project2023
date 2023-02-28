@@ -1,7 +1,7 @@
 // pages/api/jobpost.js
 import mongoose from "mongoose";
 import connectDB from "../../../../database/conn";
-import JobPosting from "../../models/JobPosting";
+import JobPosting from "../../../../models/JobPosting";
 
 const handleJobPost = async (req, res) => {
   try {
