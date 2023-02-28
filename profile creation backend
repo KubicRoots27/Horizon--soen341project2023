@@ -1,0 +1,68 @@
+<form id="signup-form">
+	<input type="text" id="username" placeholder="Username">
+	<input type="password" id="password" placeholder="Password">
+	<input type="email" id="email" placeholder="Email">
+	<input type="text" id="Name" placeholder="Name">
+	<input type="text" id="city" placeholder="City">
+	<input type="text" id="state" placeholder="State">
+	<input type="text" id="country" placeholder="Country">
+	<input type="tel" id="phoneNumber" placeholder="Phone Number">
+	<button type="submit" id="submit-btn">Create Account</button>
+</form>
+
+<script src="index.js"></script>
+
+
+
+
+//.js
+
+const signupForm = document.getElementById("signup-form");
+
+signupForm.addEventListener("submit", (e) => {
+    e.preventDefault(); // Prevents the default form submission behavior
+
+    // Get the user inputs
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
+    const email = document.getElementById("email").value;
+    const Name = document.getElementById("Name").value;
+    const city = document.getElementById("city").value;
+    const state = document.getElementById("state").value;
+    const country = document.getElementById("country").value;
+    const phoneNumber = document.getElementById("phoneNumber").value;
+
+    // Code to validate the user inputs and ensure they are not empty
+
+    // Send the user data to the server using AJAX or Fetch API
+    fetch('/signup', {
+        method: 'POST',
+        body: JSON.stringify({
+            username: username,
+            password: password,
+            email: email,
+            Name: Name,
+            city: city,
+            state: state,
+            country: country,
+            phoneNumber: phoneNumber
+        }),
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    })
+        .then(response => {
+            if (response.ok) {
+                // Code to handle successful user creation
+                console.log("User created successfully!");
+            } else {
+                // Code to handle errors
+                console.log("Error creating user");
+            }
+        })
+        .catch(error => {
+            // Code to handle network errors
+            console.log("Network error:", error);
+        });
+});
+
