@@ -1,6 +1,47 @@
-import 'src/styles/globals.css'
+//import 'src/styles/global.css'
 
-const JobPostForm = () => (
+const JobPostForm = () => {
+  const [viewCount, setViewCount] = useState(0);
+
+  useEffect(() => {
+    fetch("/api/jobpost", { method: "GET" })
+      .then((response) => response.json())
+      .then((data) => {
+        // Calculate the total view count of all job postings
+        const totalCount = data.jobPostings.reduce(
+          (acc, curr) => acc + curr.views,
+          0
+        );
+        setViewCount(totalCount);
+      })
+      .catch((error) => console.error(error));
+  }, []);
+  const handleViewCount = () => {
+    fetch("/api/jobpost/view", { method: "POST" })
+      .then((response) => response.json())
+      .then((data) => {
+        setViewCount((prevCount) => prevCount + 1);
+      })
+      .catch((error) => console.error(error));
+  };
+
+  return (
+    <div class="flex min-h-screen w-screen flex-col justify-center overflow-hidden bg-gray-50 py-6 sm:py-12">
+      <div class="relative bg-white px-6 pt-10 pb-8 shadow-xl ring-1 ring-gray-900/5">
+        <div class="mx-auto max-w-md">
+          <p class="text-center text-4xl">Job Post</p>
+          <p class="text-center">Total Views: {viewCount}</p>
+          <div class="divide-y divide-gray-300/50">
+            ...
+          </div>
+        </div>
+      </div>
+      <button onClick={handleViewCount}>Increase View Count</button>
+    </div>
+    
+  );
+};
+
     <div class="flex min-h-screen w-screen flex-col justify-center overflow-hidden bg-gray-50 py-6 sm:py-12">
   <div class="relative bg-white px-6 pt-10 pb-8 shadow-xl ring-1 ring-gray-900/5">
     <div class="mx-auto max-w-md">
@@ -32,6 +73,6 @@ const JobPostForm = () => (
     </div>
   </div>
 </div>
-  )
+
   
   export default JobPostForm

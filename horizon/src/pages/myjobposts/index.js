@@ -1,4 +1,4 @@
-import 'src/styles/globals.css'
+//import 'src/styles/global.css'
 
 const MyJobPosts = () => (
    <div id="myjobpostings">

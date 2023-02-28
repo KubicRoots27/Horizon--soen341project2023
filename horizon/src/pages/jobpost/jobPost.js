@@ -1,15 +1,21 @@
-// pages/api/jobpost.js
+//horizon\src\pages\jobpost\jobPost.js
 import mongoose from "mongoose";
-import connectDB from "../../database/conn";
-import JobPosting from "../../models/JobPosting";
-
+import connectDB from "../../../database/conn";
+//import JobPosting from "../../../model/JobPosting";
+import JobPosting from "../../../model/Schema";
 const handleJobPost = async (req, res) => {
+  
   try {
+    connectDB("JobPostingsData").catch((error) => res.json({ error: error.message }));
     const { method } = req;
     switch (method) {
       case "GET":
         // Fetch all job postings
         const jobPostings = await JobPosting.find({});
+        for (let i = 0; i < jobPostings.length; i++) {
+          jobPostings[i].views += 1;
+          await jobPostings[i].save();
+      }
         return res.status(200).json({ jobPostings });
 
       case "POST":
@@ -38,6 +44,7 @@ const handleJobPost = async (req, res) => {
 
       default:
         return res.status(405).end();
+        
     }
   } catch (err) {
     console.error(err);

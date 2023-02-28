@@ -1,4 +1,4 @@
-import 'src/styles/globals.css'
+//import 'src/styles/global.css'
 
 const JobPosted = () => (
    <div class="flex min-h-screen w-screen flex-col justify-center overflow-hidden bg-gray-50 py-6 sm:py-12">
