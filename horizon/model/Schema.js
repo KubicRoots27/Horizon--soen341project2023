@@ -1,18 +1,16 @@
 import { Schema, model, models } from "mongoose";
 
-
-
 // Student applicants to jobs
 const applicantsSchema = new Schema({
-  email : {
+  email: {
     type: String,
     required: true,
-  }
+  },
 });
 
 // Job posting schema
 const JobPostingSchema = new Schema({
-  employerEmail : {
+  employerEmail: {
     type: String,
     required: true,
   },
@@ -77,6 +75,5 @@ const UserSchema = new Schema({
 
 const Users = models.user || model("user", UserSchema);
 const JobPostings = models.jobPosting || model("jobPosting", JobPostingSchema);
-
 
 export default { Users, JobPostings };
