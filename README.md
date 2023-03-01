@@ -71,3 +71,11 @@ SPRINT 2
 | 11 | 2 | Patrick | Implement the functionality to for employers to edit and remove job postings|
 | 12 | 2 | Arsh | Implement the functionality for employers to see their post viewership |
 
+
+
+SPRINT 3 (NOT FINAL)
+
+| Task | Corresponding Story | Person assigned | Task Description |
+| ----------- | ----------- | ----------- | ----------- |
+| 1 |   |   | Run more CI tests |
+| 2 |   |   | Allow job postings to have videos |
