@@ -1,4 +1,4 @@
-import { Schema, model } from "mongoose";
+import { Schema, model, models } from "mongoose";
 
 const JobSchema = new Schema({
   title: {
@@ -9,9 +9,16 @@ const JobSchema = new Schema({
     type: String,
     required: true,
   },
+  location: {
+    type: String,
+    required: true,
+  },
+  salary: {
+    type: Number,
+    required: true,
+  },
   employer: {
-    type: Schema.Types.ObjectId,
-    ref: "User",
+    type: String,
     required: true,
   },
   datePosted: {
@@ -25,5 +32,6 @@ const JobSchema = new Schema({
   },
 });
 
-const Job = models.job || model("job", JobSchema);
-export default Job;
+const Jobs = models.job || model("job", JobSchema);
+
+export default Jobs;
