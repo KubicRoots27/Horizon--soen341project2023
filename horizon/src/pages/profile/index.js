@@ -6,7 +6,6 @@ import Link from "next/link";
 const Profile = (props) => {
   const router = useRouter();
   const { data: session, status } = useSession();
-  console.log(session);
 
   if (status === "loading") {
     return (
