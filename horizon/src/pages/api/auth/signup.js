@@ -1,9 +1,9 @@
 import connectDB from "../../../../database/conn";
-import Users from "../../../../model/Schema";
+import Users from "../../../../model/user";
 import { hash } from "bcryptjs";
 
 export default async function handler(req, res) {
-  connectDB("UsersData").catch((error) => res.json({ error: error.message }));
+  connectDB("UsersAuth").catch((error) => res.json({ error: error.message }));
 
   if (req.method === "POST") {
     // Empty body exception
@@ -12,7 +12,7 @@ export default async function handler(req, res) {
     }
 
     // Destructure the request body
-    let { fname, lname, email, password } = req.body;
+    let { fname, lname, email, accountType, password } = req.body;
 
     // Check duplicate user
     const checkexisting = await Users.findOne({ email: req.body.email });
@@ -26,6 +26,7 @@ export default async function handler(req, res) {
         fname,
         lname,
         email,
+        accountType,
         password: await hash(password, 12),
       },
       function (err, data) {

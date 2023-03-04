@@ -15,6 +15,7 @@ const Signup = () => {
               fname: "",
               lname: "",
               email: "",
+              accountType: "",
               password: "",
               password2: "",
             }}
@@ -28,6 +29,9 @@ const Signup = () => {
               }
               if (!values.email) {
                 errors.email = "Required";
+              }
+              if (!values.accountType) {
+                errors.accountType = "Required";
               }
               if (!values.password) {
                 errors.password = "Required";
@@ -55,84 +59,92 @@ const Signup = () => {
                 alert(response.statusText);
               }
             }}
-
-
-            
           >
             {({ errors, touched }) => (
-            <Form>
-              <div className="pb-3">
+              <Form>
+                <div className="pb-3">
+                  <Field
+                    name="fname"
+                    placeholder="First name"
+                    type="text"
+                    className="outline-2 outline-slate-400 bg-slate-200 rounded-md p-1"
+                  />
+                  {errors.fname && touched.fname ? (
+                    <div className="text-red-500">{errors.fname}</div>
+                  ) : null}
+                </div>
 
-                <Field
-                  name="fname"
-                  placeholder="First name"
-                  type="text"
-                  className="outline-2 outline-slate-400 bg-slate-200 rounded-md p-1"
-                />
-                {errors.fname && touched.fname ? (
-                  <div className="text-red-500">{errors.fname}</div>
-                ) : null}
+                <div className="pb-3">
+                  <Field
+                    name="lname"
+                    placeholder="Last name"
+                    type="text"
+                    className="outline-2 outline-slate-400 bg-slate-200 rounded-md p-1"
+                  />
+                  {errors.lname && touched.lname ? (
+                    <div className="text-red-500">{errors.lname}</div>
+                  ) : null}
+                </div>
 
-              </div>
+                <div className="pb-3">
+                  <Field
+                    name="email"
+                    placeholder="Email"
+                    type="text"
+                    className="outline-2 outline-slate-400 bg-slate-200 rounded-md p-1"
+                  />
+                  {errors.email && touched.email ? (
+                    <div className="text-red-500">{errors.email}</div>
+                  ) : null}
+                </div>
 
-              <div className="pb-3">
-                <Field
-                  name="lname"
-                  placeholder="Last name"
-                  type="text"
-                  className="outline-2 outline-slate-400 bg-slate-200 rounded-md p-1"
-                />
-                {errors.lname && touched.lname ? (
-                  <div className="text-red-500">{errors.lname}</div>
-                ) : null}
-              </div>
+                <div className="pb-3">
+                  <Field
+                    name="accountType"
+                    placeholder="Account type"
+                    as="select"
+                    className="outline-2 outline-slate-400 bg-slate-200 rounded-md p-1"
+                  >
+                    <option value="">Select account type</option>
+                    <option value="student">Student</option>
+                    <option value="employer">Employer</option>
+                    <option value="admin">Admin</option>
+                  </Field>
+                  {errors.accountType && touched.accountType ? (
+                    <div className="text-red-500">{errors.accountType}</div>
+                  ) : null}
+                </div>
 
-              <div className="pb-3">
-                <Field
-                  name="email"
-                  placeholder="Email"
-                  type="text"
-                  className="outline-2 outline-slate-400 bg-slate-200 rounded-md p-1"
-                />
-                {errors.email && touched.email ? (
-                  <div className="text-red-500">{errors.email}</div>
-                ) : null}
+                <div className="pb-3">
+                  <Field
+                    name="password"
+                    placeholder="Password"
+                    type="password"
+                    className="outline-2 outline-slate-400 bg-slate-200 rounded-md p-1"
+                  />
+                  {errors.password && touched.password ? (
+                    <div className="text-red-500">{errors.password}</div>
+                  ) : null}
+                </div>
 
-              </div>
+                <div className="pb-3">
+                  <Field
+                    name="password2"
+                    placeholder="Confirm password"
+                    type="password"
+                    className="outline-2 outline-slate-400 bg-slate-200 rounded-md p-1"
+                  />
+                  {errors.password2 && touched.password2 ? (
+                    <div className="text-red-500">{errors.password2}</div>
+                  ) : null}
+                </div>
 
-              <div className="pb-3">
-                <Field
-                  name="password"
-                  placeholder="Password"
-                  type="password"
-                  className="outline-2 outline-slate-400 bg-slate-200 rounded-md p-1"
-                />
-                {errors.password && touched.password ? (
-                  <div className="text-red-500">{errors.password}</div>
-                ) : null}
-
-              </div>
-
-              <div className="pb-3">
-                <Field
-                  name="password2"
-                  placeholder="Confirm password"
-                  type="password"
-                  className="outline-2 outline-slate-400 bg-slate-200 rounded-md p-1"
-                />
-                {errors.password2 && touched.password2 ? (
-                  <div className="text-red-500">{errors.password2}</div>
-                ) : null}
-              </div>
-
-              <button type="submit" className="bg-slate-400 rounded-md px-3">
-                Signup
-              </button>
-            </Form>
+                <button type="submit" className="bg-slate-400 rounded-md px-3">
+                  Signup
+                </button>
+              </Form>
             )}
-
           </Formik>
-
         </div>
       </div>
     </div>

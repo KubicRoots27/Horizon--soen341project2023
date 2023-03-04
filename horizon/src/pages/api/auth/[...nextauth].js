@@ -1,7 +1,7 @@
 import NextAuth from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 import connectDB from "../../../../database/conn";
-import Users from "../../../../model/Schema";
+import Users from "../../../../model/user";
 import bcrypt from "bcryptjs";
 
 export const authOptions = {
@@ -9,7 +9,7 @@ export const authOptions = {
     CredentialsProvider({
       name: "Credentials",
       async authorize(credentials, req) {
-        connectDB("UsersData").catch((error) =>
+        connectDB("UsersAuth").catch((error) =>
           res.json({ error: error.message })
         );
 
