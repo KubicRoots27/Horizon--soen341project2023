@@ -30,6 +30,17 @@ const JobSchema = new Schema({
     ref: "User",
     default: [],
   },
+  status: {
+    type: String,
+    required: true,
+    enum: ["Open", "Closed"],
+    default: "Open",
+  },
+  chosenApplicant: {
+    type: Schema.Types.ObjectId,
+    ref: "User",
+    default: null,
+  },
 });
 
 const Jobs = models.job || model("job", JobSchema);

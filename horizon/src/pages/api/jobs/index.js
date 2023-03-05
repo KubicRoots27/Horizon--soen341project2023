@@ -3,7 +3,7 @@ import Jobs from "model/job";
 
 
 export default async function handler(req, res) {
-    connectDB("Jobs").catch((error) => res.json({ error: error.message }));
+    // connectDB("Users").catch((error) => res.json({ error: error.message }));
     
     if (req.method === "GET") {
         

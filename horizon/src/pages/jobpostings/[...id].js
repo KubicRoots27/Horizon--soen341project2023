@@ -1,7 +1,37 @@
 import { useSession } from "next-auth/react";
+import React, { useState, useEffect } from "react";
 
 const JobPosting = ({ jobPosting }) => {
   const { data: session, status } = useSession();
+
+  const [userId, setUserId] = useState("");
+  const [applied, setApplied] = useState(false);
+
+  useEffect(() => {
+    if (status !== "loading" && status !== "unauthenticated") {
+      setUserId(session.user._id.toString());
+    }
+  }, [session]);
+
+  useEffect(() => {
+    if (status !== "loading" && status !== "unauthenticated") {
+      if (session.user.accountType === "student" && userId !== "") {
+        const fetchJobPostings = async () => {
+          const response = await fetch("http://localhost:3000/api/jobs");
+          const data = await response.json();
+          if (data.jobs !== undefined) {
+            const currentJob = data.jobs.filter(
+              (job) => job._id === jobPosting._id
+            );
+            if (currentJob[0].applicants.includes(userId)) {
+              setApplied(true);
+            }
+          }
+        };
+        fetchJobPostings();
+      }
+    }
+  }, [userId]);
 
   return (
     <div className="flex flex-col justify-center items-center h-screen">
@@ -18,27 +48,37 @@ const JobPosting = ({ jobPosting }) => {
         Date Posted: {jobPosting.datePosted}
         <br />
       </div>
-      {session && session.user.accountType === "student" && (
-        <button className="bg-slate-500 rounded hover:outline outline-2 p-2 mt-5"
-        onClick={() => {
+      {session && session.user.accountType === "student" && !applied && (
+        <button
+          className="bg-slate-500 rounded hover:outline outline-2 p-2 mt-5"
+          onClick={() => {
             const apply = async () => {
-                const response = await fetch(`http://localhost:3000/api/jobs/apply/${jobPosting._id}`, {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json",
-                    },
-                    body: JSON.stringify({
-                        student: session.user._id,
-                    }),
-                });
-                const data = await response.json();
-                console.log(data);
+              const response = await fetch(
+                `http://localhost:3000/api/jobs/apply/${jobPosting._id}`,
+                {
+                  method: "POST",
+                  headers: {
+                    "Content-Type": "application/json",
+                  },
+                  body: JSON.stringify({
+                    student: session.user._id,
+                  }),
+                }
+              );
+              if (response.ok) {
+                setApplied(true);
+              }
+              const data = await response.json();
             };
             apply();
-        }}
+          }}
         >
           Apply
         </button>
+      )}
+
+      {session && session.user.accountType === "student" && applied && (
+        <div className="text-2xl font-bold">You have already applied!</div>
       )}
     </div>
   );

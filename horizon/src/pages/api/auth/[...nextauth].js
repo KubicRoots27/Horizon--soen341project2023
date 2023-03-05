@@ -9,7 +9,7 @@ export const authOptions = {
     CredentialsProvider({
       name: "Credentials",
       async authorize(credentials, req) {
-        connectDB("UsersAuth").catch((error) =>
+        connectDB("Users").catch((error) =>
           res.json({ error: error.message })
         );
 
