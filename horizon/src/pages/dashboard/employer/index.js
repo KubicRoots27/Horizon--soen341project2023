@@ -91,20 +91,44 @@ const EmployerDashboard = () => {
           >
             <h2>Title: {jobPosting.title}</h2>
             <p> Description: {jobPosting.description}</p>
-            <h2 className="font-bold">Applicants:</h2>
+            {jobPosting.chosenApplicant === null && (
+              <h2 className="font-bold">Applicants:</h2>
+            )}
             {jobPosting.applicants && jobPosting.applicants.length === 0 && (
-              <div className="text-xl font-bold text-russian_green">
-                No applications yet!
+              <div className="text-xl font-bold ">No applications yet!</div>
+            )}
+            {jobPosting.chosenApplicant && (
+              <div className="">
+                Chosen applicant: {jobPosting.chosenApplicant}
               </div>
             )}
 
             {jobPosting.applicants &&
-              jobPosting.applicants.map((jobApplication) => (
-                <div>
-                  <div className="" key={jobApplication}>
-                    Student ID: {jobApplication}
-                  </div>
-                  <button className="bg-green-800 p-1 rounded-md mr-2 hover:outline outline-2">
+              jobPosting.chosenApplicant === null &&
+              jobPosting.applicants.map((applicant) => (
+                <div key={applicant}>
+                  <div className="">Student ID: {applicant}</div>
+                  <button
+                    className="bg-green-800 p-1 rounded-md mr-2 hover:outline outline-2"
+                    onClick={() => {
+                      const apply = async () => {
+                        const response = await fetch(
+                          `http://localhost:3000/api/jobs/acceptcandidate/${jobPosting._id}`,
+                          {
+                            method: "POST",
+                            headers: {
+                              "Content-Type": "application/json",
+                            },
+                            body: JSON.stringify({
+                              student: applicant,
+                            }),
+                          }
+                        );
+                        const data = await response.json();
+                      };
+                      apply();
+                    }}
+                  >
                     Accept
                   </button>
                   <button className="bg-red-600 p-1 rounded-md hover:outline outline-2">

@@ -9,19 +9,29 @@ export default async function handler(req, res) {
 
     let { student } = req.body;
 
+    console.log(student);
+    console.log(jobId);
+
     try {
       const job = await Jobs.findById(jobId);
       if (!job) {
         return res.status(404).json({ error: "Job not found" });
       }
-      if (job.applicants.includes(student)) {
-        return res.status(400).json({ error: "Already applied" });
+
+      if (job.chosenApplicant !== null) {
+        return res.status(401).json({ error: "Already chosen" });
       }
-      job.applicants.push(student);
+      console.log(job);
+      if (job.chosenApplicant === student) {
+        return res.status(402).json({ error: "Already chosen" });
+      }
+      job.chosenApplicant = student;
+      job.status = "Closed";
+
       await job.save();
       return res.status(200).json({ job });
     } catch (error) {
-      return res.status(400).json({ error: error.message });
+      return res.status(403).json({ error: error.message });
     }
   } else {
     res.status(500).json({ error: "Only POST method accepted" });

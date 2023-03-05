@@ -69,41 +69,21 @@ const Profile = (props) => {
 
       {session.user.accountType === "student" && (
         <Card width="w-3/4 lg:w-3/4">
-          <div className="text-2xl font-bold text-russian_green">
-            Current Job Applications:
-          </div>
-          {session.user.jobApplications.length === 0 && (
-            <div className="text-xl font-bold text-russian_green">
-              You have no job applications!
-            </div>
-          )}
-          {session.user.jobApplications.map((job) => (
-            <div className="text-2xl font-bold text-russian_green">
-              {job.title}
-            </div>
-          ))}
-          <div className="text-2xl font-bold text-russian_green">
-            <Link href="/jobpostings">
-              <button className="bg-slate-500 rounded hover:outline outline-2 p-2 mt-5">
-                Browse Jobs Postings
-              </button>
-            </Link>
-          </div>
+          <Link href="/dashboard/student">
+            <button className="bg-slate-500 rounded hover:outline outline-2 p-2 mt-5">
+              Student Dashboard
+            </button>
+          </Link>
         </Card>
       )}
 
       {session.user.accountType === "admin" && (
         <Card width="w-3/4 lg:w-3/4">
-          <div className="text-2xl font-bold text-russian_green">
-            You are an admin!
-          </div>
-          <div className="text-2xl font-bold text-russian_green">
-            <Link href="/admin">
-              <button className="bg-slate-500 rounded hover:outline outline-2 p-2 mt-5">
-                Go to admin dashboard
-              </button>
-            </Link>
-          </div>
+          <Link href="/dashboard/admin">
+            <button className="bg-slate-500 rounded hover:outline outline-2 p-2 mt-5">
+              Admin Dashboard
+            </button>
+          </Link>
         </Card>
       )}
     </>

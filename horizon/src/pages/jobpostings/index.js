@@ -8,7 +8,8 @@ const JobPostings = () => {
     const fetchJobPostings = async () => {
       const response = await fetch("http://localhost:3000/api/jobs");
       const data = await response.json();
-      setJobPostings(data.jobs);
+      const openJobs = data.jobs.filter((job) => job.status === "Open");
+      setJobPostings(openJobs);
     };
     fetchJobPostings();
   }, []);
