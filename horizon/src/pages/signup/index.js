@@ -1,6 +1,7 @@
 import React from "react";
 import { Formik, Field, Form } from "formik";
 import { useRouter } from "next/router";
+import Link from "next/link";
 
 const Signup = () => {
   const router = useRouter();
@@ -145,6 +146,12 @@ const Signup = () => {
               </Form>
             )}
           </Formik>
+        </div>
+        <div className="w-fit mx-auto pt-3">
+          Already have an account?{" "}
+          <Link className="text-blue-600" href="/login">
+            Login
+          </Link>
         </div>
       </div>
     </div>

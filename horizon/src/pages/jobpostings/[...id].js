@@ -1,5 +1,6 @@
 import { useSession } from "next-auth/react";
 import React, { useState, useEffect } from "react";
+import Link from "next/link";
 
 const JobPosting = ({ jobPosting }) => {
   const { data: session, status } = useSession();
@@ -32,6 +33,30 @@ const JobPosting = ({ jobPosting }) => {
       }
     }
   }, [userId]);
+
+  if (status === "loading") {
+    return (
+      <div className="flex justify-center items-center h-screen">
+        <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-russian_green"></div>
+      </div>
+    );
+  }
+  if (status === "unauthenticated") {
+    return (
+      <div className="flex flex-col justify-center items-center h-screen">
+        <div className="text-2xl font-bold text-russian_green">
+          You are not logged in!
+        </div>
+        <div className="text-2xl font-bold text-russian_green">
+          <Link href="/login">
+            <button className="bg-slate-500 rounded hover:outline outline-2 p-2 mt-5">
+              Login
+            </button>
+          </Link>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="flex flex-col justify-center items-center h-screen">
