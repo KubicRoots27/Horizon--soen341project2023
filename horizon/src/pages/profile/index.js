@@ -1,4 +1,5 @@
 import { useSession, signOut } from "next-auth/react";
+import React, { useState, useEffect } from "react";
 import Card from "../../../components/ui/card";
 import { useRouter } from "next/router";
 import Link from "next/link";
@@ -6,6 +7,37 @@ import Link from "next/link";
 const Profile = (props) => {
   const router = useRouter();
   const { data: session, status } = useSession();
+
+  const [userId, setUserId] = useState("");
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    if (session) {
+      setUserId(session.user._id);
+      setLoading(false);
+    }
+  }, [session]);
+
+  // Employer Profile
+  const [jobPostings, setJobPostings] = useState([]);
+  useEffect(() => {
+    if (!loading) {
+      const fetchJobPostings = async () => {
+        const response = await fetch("http://localhost:3000/api/jobs");
+        const data = await response.json();
+        console.log(data.jobs);
+        if (data.jobs !== undefined) {
+          console.log("userId", userId);
+          const filteredData = data.jobs.filter(
+            (job) => job.employer === userId
+          );
+          console.log(filteredData);
+          setJobPostings(filteredData);
+        }
+      };
+      fetchJobPostings();
+    }
+  }, [loading]);
 
   if (status === "loading") {
     return (
@@ -61,14 +93,41 @@ const Profile = (props) => {
           <div className="text-2xl font-bold text-russian_green">
             Current Job Postings:
           </div>
-          {session.user.jobOffers.length === 0 && (
+          {jobPostings.length === 0 && (
             <div className="text-xl font-bold text-russian_green">
               You have no job postings!
             </div>
           )}
-          {session.user.jobOffers.map((job) => (
-            <div className="text-2xl font-bold text-russian_green">
-              {job.title}
+          {jobPostings.map((jobPosting) => (
+            <div
+              className="bg-slate-400 m-2 p-4 rounded-md"
+              key={jobPosting._id}
+            >
+              <h2>Title: {jobPosting.title}</h2>
+              <p> Description: {jobPosting.description}</p>
+              <h2 className="font-bold">Applicants:</h2>
+              {jobPosting.applicants && jobPosting.applicants.length === 0 && (
+                <div className="text-xl font-bold text-russian_green">
+                  No applications yet!
+                </div>
+              )}
+
+              {jobPosting.applicants &&
+                jobPosting.applicants.map((jobApplication) => (
+                  <div>
+                    <div className="" key={jobApplication}>
+                      Student ID: {jobApplication}
+                    </div>
+                    <button className="bg-green-800 p-1 rounded-md mr-2 hover:outline outline-2">
+                      Accept
+                    </button>
+                    <button className="bg-red-600 p-1 rounded-md hover:outline outline-2">
+                      Reject
+                    </button>
+                  </div>
+                ))}
+
+              <br />
             </div>
           ))}
           <div className="text-2xl font-bold text-russian_green">
