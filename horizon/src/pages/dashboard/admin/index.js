@@ -1,4 +1,5 @@
-import Card from "../../../components/Card";
+import Card from "../../../../components/ui/card";
+import Link from "next/link";
 
 const AdminDashboard = () => {
   const { data: session, status } = useSession();
