@@ -77,5 +77,5 @@ SPRINT 3 (NOT FINAL)
 
 | Task | Corresponding Story | Person assigned | Task Description |
 | ----------- | ----------- | ----------- | ----------- |
-| 1 |   |   | Run more CI tests |
-| 2 |   |   | Allow job postings to have videos |
+| 1 |   |   ||
+| 2 |   |   | Implement functionality to allow job postings to have videos |
