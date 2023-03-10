@@ -4,6 +4,10 @@ import Card from "../../../components/ui/card";
 import { useRouter } from "next/router";
 import Link from "next/link";
 
+function capitalizeFirstLetter(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
 const Profile = (props) => {
   const router = useRouter();
   const { data: session, status } = useSession();
@@ -46,7 +50,7 @@ const Profile = (props) => {
           <br />
           Email: {session.user.email}
           <br />
-          Account Type: {session.user.accountType}
+          Account Type: {capitalizeFirstLetter(session.user.accountType)}
         </div>
 
         <button
