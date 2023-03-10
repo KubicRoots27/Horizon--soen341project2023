@@ -88,6 +88,6 @@ SPRINT 3
 | 9 |   | Mario | Styling of register page |
 | 10 |   | Bachar  | texts size and fonts |
 | 11 |   | Bachar  | Styling of click buttons |
-| 12 |   |   | |
+| 12 |   | Bachar  | Error messages style |
 | 13 |   |   | |
 
