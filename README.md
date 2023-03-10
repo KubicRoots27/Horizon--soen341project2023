@@ -86,8 +86,8 @@ SPRINT 3
 | 7 |   | Christina | Improve log in and sign up validation|
 | 8 |   | Christina  | Testing of website, database|
 | 9 |   | Mario | Styling of register page |
-| 10 |   |   | Styling of  |
-| 11 |   |   | |
+| 10 |   | Bachar  | texts size and fonts |
+| 11 |   | Bachar  | Styling of click buttons |
 | 12 |   |   | |
 | 13 |   |   | |
 
