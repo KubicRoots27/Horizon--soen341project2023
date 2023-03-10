@@ -81,12 +81,12 @@ SPRINT 3
 | 2 |   |  Christina | Implement functionality to allow job postings to have videos |
 | 3 |   |  Christina | See Student profile through link from application|
 | 4 |   |  Christina | Refuse applicant  |
-| 5 |   |   | Styling of home page|
-| 6 |   |   | Styling of all pages|
+| 5 |   | Mario | Styling of home page|
+| 6 |   | Mario  | Styling of login page|
 | 7 |   | Christina | Improve log in and sign up validation|
 | 8 |   | Christina  | Testing of website, database|
-| 9 |   |   | |
-| 10 |   |   | |
+| 9 |   | Mario | Styling of register page |
+| 10 |   |   | Styling of  |
 | 11 |   |   | |
 | 12 |   |   | |
 | 13 |   |   | |
