@@ -73,9 +73,21 @@ SPRINT 2
 
 
 
-SPRINT 3 (NOT FINAL)
+SPRINT 3 
 
 | Task | Corresponding Story | Person assigned | Task Description |
 | ----------- | ----------- | ----------- | ----------- |
-| 1 |   |   ||
-| 2 |   |   | Implement functionality to allow job postings to have videos |
+| 1 |   |  Christina |Edit profile for all user types|
+| 2 |   |  Christina | Implement functionality to allow job postings to have videos |
+| 3 |   |  Christina | See Student profile through link from application|
+| 4 |   |  Christina | Refuse applicant  |
+| 5 |   |   | Styling of home page|
+| 6 |   |   | Styling of all pages|
+| 7 |   | Christina | Improve log in and sign up validation|
+| 8 |   | Christina  | Testing of website, database|
+| 9 |   |   | |
+| 10 |   |   | |
+| 11 |   |   | |
+| 12 |   |   | |
+| 13 |   |   | |
+
