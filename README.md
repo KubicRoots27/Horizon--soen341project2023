@@ -52,3 +52,42 @@ front end, back end, full stack
 
 ## Plan for next Sprint
 
+
+
+SPRINT 2 
+
+| Task | Corresponding Story | Person assigned | Task Description |
+| ----------- | ----------- | ----------- | ----------- |
+| 1 | 1 | Christina | Design the layout and user interface for the account creation and login pages|
+| 2 | 1 | Bachar | Implement the functionality for creating new student accounts|
+| 3 | 1 | Christina | Implement the functionality for logging in to existing student accounts |
+| 4 | 1 | Christina | Implement the functionality for creating |
+|  5  | 1 |  Sarmad | Implement the editing student profiles   |
+| 6 | 1 | Christina | Test the account creation, login, and profile creation/editing functionality |
+| 7 | 2 | Mario | Design layout for the creation of a job post |
+| 8 | 2 | Mario | Design layout for the job post |
+| 9 | 2 | Sarmad | Design layout of the "my job postings" page |
+| 10 | 2 | Patrick | Implement the functionality to for employers to create and publish job postings |
+| 11 | 2 | Patrick | Implement the functionality to for employers to edit and remove job postings|
+| 12 | 2 | Arsh | Implement the functionality for employers to see their post viewership |
+
+
+
+SPRINT 3 
+
+| Task | Corresponding Story | Person assigned | Task Description |
+| ----------- | ----------- | ----------- | ----------- |
+| 1 |   |  Christina |Edit profile for all user types|
+| 2 |   |  Christina | Implement functionality to allow job postings to have videos |
+| 3 |   |  Christina | See Student profile through link from application|
+| 4 |   |  Christina | Refuse applicant  |
+| 5 |   | Mario | Styling of home page|
+| 6 |   | Mario  | Styling of login page|
+| 7 |   | Christina | Improve log in and sign up validation|
+| 8 |   | Christina  | Testing of website, database|
+| 9 |   | Mario | Styling of register page |
+| 10 |   | Bachar  | texts size and fonts |
+| 11 |   | Bachar  | Styling of click buttons |
+| 12 |   | Bachar  | Error messages style |
+| 13 |   |   | |
+
