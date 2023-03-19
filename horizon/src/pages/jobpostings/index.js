@@ -41,8 +41,8 @@ const JobPostings = () => {
   }
 
   return (
-    <div>
-      <div className="text-2xl font-bold text-russian_green">Job Postings:</div>
+    <div className="bg-[#f1f1f1] w-2/3 mx-auto h-fit mt-20 p-5 rounded-md shadow-md">
+      <div className="text-2xl font-bold">Job Postings:</div>
       {jobPostings.map((jobPosting) => (
         <div key={jobPosting._id}>
           <h2>{jobPosting.title}</h2>

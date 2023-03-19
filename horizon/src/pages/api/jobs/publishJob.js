@@ -11,7 +11,9 @@ export default async function handler(req, res) {
     }
 
     // Destructure the request body
-    let { title, description, location, salary, employer } = req.body;
+    let { title, description, location, videoId, salary, employer } = req.body;
+
+    console.log(req.body);
 
     // Create job and save to database
     Jobs.create(
@@ -19,11 +21,13 @@ export default async function handler(req, res) {
         title,
         description,
         location,
+        videoId,
         salary,
         employer,
       },
       function (err, data) {
         if (err) {
+          console.log(err);
           return res.status(400).json({ error: err.message });
         }
         return res.status(200).json({ status: true, job: data });

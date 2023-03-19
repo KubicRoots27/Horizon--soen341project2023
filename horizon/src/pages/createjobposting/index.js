@@ -16,6 +16,7 @@ const CreateJobPosting = () => {
             title: "",
             description: "",
             location: "",
+            videoId: "",
             salary: "",
           }}
           validate={(values) => {
@@ -36,6 +37,7 @@ const CreateJobPosting = () => {
           }}
           onSubmit={async (values) => {
             values = { ...values, employer: session.user._id.toString() };
+            console.log(values);
             const response = await fetch("/api/jobs/publishJob", {
               method: "POST",
               headers: {
@@ -44,7 +46,6 @@ const CreateJobPosting = () => {
               body: JSON.stringify(values),
             });
             if (response.ok) {
-            
               router.push("/profile");
             } else {
               alert(response.statusText);
@@ -64,6 +65,14 @@ const CreateJobPosting = () => {
               <Field
                 name="description"
                 placeholder="Description"
+                type="text"
+                className="outline-2 outline-slate-400 bg-slate-200 rounded-md p-1"
+              />
+            </div>
+            <div className="pb-3">
+              <Field
+                name="videoId"
+                placeholder="Youtube Video ID"
                 type="text"
                 className="outline-2 outline-slate-400 bg-slate-200 rounded-md p-1"
               />

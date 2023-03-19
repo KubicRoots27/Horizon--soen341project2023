@@ -1,6 +1,7 @@
 import { useSession } from "next-auth/react";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import YouTube from "react-youtube";
 
 const JobPosting = ({ jobPosting }) => {
   const { data: session, status } = useSession();
@@ -59,7 +60,7 @@ const JobPosting = ({ jobPosting }) => {
   }
 
   return (
-    <div className="flex flex-col justify-center items-center h-screen">
+    <div className="flex flex-col justify-center items-center bg-[#f1f1f1] w-fit mx-auto h-fit mt-20 p-5 rounded-md shadow-md">
       <div className="text-2xl font-bold">Job Posting: {jobPosting.title}</div>
       <div>
         Description: {jobPosting.description}
@@ -73,6 +74,15 @@ const JobPosting = ({ jobPosting }) => {
         Date Posted: {jobPosting.datePosted}
         <br />
       </div>
+
+      {jobPosting.videoId !== "" &&
+        jobPosting.videoId !== null &&
+        jobPosting.videoId !== undefined && (
+          <div className="mt-10">
+            <YouTube videoId={jobPosting.videoId} />
+          </div>
+        )}
+
       {session && session.user.accountType === "student" && !applied && (
         <button
           className="bg-slate-500 rounded hover:outline outline-2 p-2 mt-5"

@@ -11,7 +11,8 @@ export default async function handler(req, res) {
     }
 
     // Destructure the request body
-    let { id, title, description, location, salary, employer } = req.body;
+    let { id, title, description, location, videoId, salary, employer } =
+      req.body;
 
     // Find job by ID and update fields
     Jobs.findByIdAndUpdate(
@@ -20,6 +21,7 @@ export default async function handler(req, res) {
         title,
         description,
         location,
+        videoId,
         salary,
         employer,
       },

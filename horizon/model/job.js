@@ -13,6 +13,10 @@ const JobSchema = new Schema({
     type: String,
     required: true,
   },
+  videoId: {
+    type: String,
+    default: null,
+  },
   salary: {
     type: Number,
     required: true,
