@@ -59,6 +59,12 @@ const Profile = (props) => {
         >
           SignOut
         </button>
+
+        <Link href="/profile/edit">
+          <button className="bg-slate-500 rounded hover:outline outline-2 p-2 mt-5 mx-5">
+            Edit Profile
+          </button>
+        </Link>
       </Card>
 
       {session.user.accountType === "employer" && (
