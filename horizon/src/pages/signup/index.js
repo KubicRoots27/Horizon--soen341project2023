@@ -22,27 +22,44 @@ const Signup = () => {
             }}
             validate={(values) => {
               const errors = {};
+              // First name
               if (!values.fname) {
                 errors.fname = "Required";
               }
+
+              // Last name
               if (!values.lname) {
                 errors.lname = "Required";
               }
+
+              // Email
               if (!values.email) {
                 errors.email = "Required";
+              } else if (
+                !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)
+              ) {
+                errors.email = "Invalid email address";
               }
+
+              // Account type
               if (!values.accountType) {
                 errors.accountType = "Required";
               }
+
+              // Password
               if (!values.password) {
                 errors.password = "Required";
+              } else if (values.password.length < 6) {
+                errors.password = "Password must be at least 6 characters";
               }
+
+              // Confirm password
               if (!values.password2) {
                 errors.password2 = "Required";
-              }
-              if (values.password !== values.password2) {
+              } else if (values.password !== values.password2) {
                 errors.password2 = "Passwords do not match";
               }
+
               return errors;
             }}
             onSubmit={async (values) => {
