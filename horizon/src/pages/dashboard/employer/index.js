@@ -107,7 +107,12 @@ const EmployerDashboard = () => {
               jobPosting.chosenApplicant === null &&
               jobPosting.applicants.map((applicant) => (
                 <div key={applicant}>
-                  <div className="">Student ID: {applicant}</div>
+                  <Link
+                    className="text-blue-600 underline mr-5"
+                    href={`/profile/${applicant}`}
+                  >
+                    {applicant}
+                  </Link>
                   <button
                     className="bg-green-800 p-1 rounded-md mr-2 hover:outline outline-2"
                     onClick={() => {

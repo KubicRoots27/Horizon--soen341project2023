@@ -44,11 +44,17 @@ const JobPostings = () => {
     <div className="bg-[#f1f1f1] w-2/3 mx-auto h-fit mt-20 p-5 rounded-md shadow-md">
       <div className="text-2xl font-bold">Job Postings:</div>
       {jobPostings.map((jobPosting) => (
-        <div key={jobPosting._id}>
-          <h2>{jobPosting.title}</h2>
-          <p>{jobPosting.description}</p>
+        <div key={jobPosting._id} className="bg-slate-200 rounded-md p-5 my-3">
+          <h2>
+            <span className="font-bold">Title: </span>
+            {jobPosting.title}
+          </h2>
+          <p>
+            <span className="font-bold">Description: </span>
+            {jobPosting.description}
+          </p>
           <Link href={`/jobpostings/${jobPosting._id}`}>
-            <button className="bg-slate-500 rounded hover:outline outline-2">
+            <button className="bg-slate-500 rounded hover:outline outline-2 p-2 mt-2">
               View Job Posting
             </button>
           </Link>

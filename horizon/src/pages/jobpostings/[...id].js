@@ -113,7 +113,7 @@ const JobPosting = ({ jobPosting }) => {
       )}
 
       {session && session.user.accountType === "student" && applied && (
-        <div className="text-2xl font-bold">You have already applied!</div>
+        <div className="text-2xl font-bold mt-2">You have already applied!</div>
       )}
     </div>
   );
