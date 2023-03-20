@@ -1,18 +1,16 @@
 import connectDB from "database/conn";
 import Jobs from "model/job";
 
-
 export default async function handler(req, res) {
-    // connectDB("Users").catch((error) => res.json({ error: error.message }));
-    
-    if (req.method === "GET") {
-        
-
-        Jobs.find({}, function (err, data) {
-            if (err) {
-            return res.status(400).json({ error: err.message });
-            }
-            return res.status(200).json({ status: true, jobs: data });
-        });        
+  if (req.method === "GET") {
+    try {
+      const jobs = await Jobs.find({});
+      return res.status(200).json({ status: true, jobs });
+    } catch (error) {
+      return res.status(400).json({ error: error.message });
     }
+  } else {
+    res.setHeader("Allow", "GET");
+    res.status(405).json({ error: `Method ${req.method} not allowed` });
+  }
 }
