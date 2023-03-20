@@ -25,6 +25,13 @@ front end, back end, full stack
 4. As an admin, I want to be able to manage user profiles and postings on the platform so that I can ensure that the platform is running smoothly.
 5. As a student, I want to be able to save job postings to my favorites to be able to see any changes made.
 6. As a student, I want to be able to apply for job postings and let the employer aware of my interest.
+7. As an employer, I want to be able to accept or decline a user’s application
+8. As an employer, I want to be able to link a youtube video to my job posting
+9. As a student I want to be able to link my linkedin account
+10. As a user I want to be able to edit my profile
+11. As an employer, I want to be able to click on the applicants profile
+11. As an employer I want to be able to delete a job posting
+
 
 ## Task Breakdown
 | Task | Corresponding Story | Person assigned | Task Description |
@@ -77,14 +84,14 @@ SPRINT 3
 
 | Task | Corresponding Story | Person assigned | Task Description |
 | ----------- | ----------- | ----------- | ----------- |
-| 1 |   |  Christina |Edit profile for all user types|
-| 2 |   |  Christina | Implement functionality to allow job postings to have videos |
-| 3 |   |  Christina | See Student profile through link from application|
-| 4 |   |  Christina | Refuse applicant  |
+| 1 |  10 |  Christina |Edit profile for all user types|
+| 2 |  8 |  Christina | Implement functionality to allow job postings to have videos |
+| 3 |  11 |  Christina | See Student profile through link from application|
+| 4 | 7  |  Christina | Refuse applicant  |
 | 5 |   | Mario | Styling of home page|
 | 6 |   | Mario  | Styling of login page|
-| 7 |   | Christina | Improve log in and sign up validation|
-| 8 |   | Christina  | Testing of website, database|
+| 7 |  1 | Christina | Improve log in and sign up validation|
+| 8 | N/A  | Christina  | Testing of website, database|
 | 9 |   | Mario | Styling of register page |
 | 10 |   | Bachar  | texts size and fonts |
 | 11 |   | Bachar  | Styling of click buttons |
