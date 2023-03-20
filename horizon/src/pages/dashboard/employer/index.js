@@ -116,7 +116,7 @@ const EmployerDashboard = () => {
                   <button
                     className="bg-green-800 p-1 rounded-md mr-2 hover:outline outline-2"
                     onClick={() => {
-                      const apply = async () => {
+                      const accept = async () => {
                         const response = await fetch(
                           `http://localhost:3000/api/jobs/acceptcandidate/${jobPosting._id}`,
                           {
@@ -131,12 +131,32 @@ const EmployerDashboard = () => {
                         );
                         const data = await response.json();
                       };
-                      apply();
+                      accept();
                     }}
                   >
                     Accept
                   </button>
-                  <button className="bg-red-600 p-1 rounded-md hover:outline outline-2">
+                  <button
+                    className="bg-red-600 p-1 rounded-md hover:outline outline-2"
+                    onClick={() => {
+                      const reject = async () => {
+                        const response = await fetch(
+                          `http://localhost:3000/api/jobs/rejectcandidate/${jobPosting._id}`,
+                          {
+                            method: "POST",
+                            headers: {
+                              "Content-Type": "application/json",
+                            },
+                            body: JSON.stringify({
+                              student: applicant,
+                            }),
+                          }
+                        );
+                        const data = await response.json();
+                      };
+                      reject();
+                    }}
+                  >
                     Reject
                   </button>
                 </div>

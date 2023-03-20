@@ -9,7 +9,6 @@ export default async function handler(req, res) {
 
     let { student } = req.body;
 
-
     try {
       const job = await Jobs.findById(jobId);
       if (!job) {
@@ -19,14 +18,18 @@ export default async function handler(req, res) {
       if (job.chosenApplicant !== null) {
         return res.status(401).json({ error: "Already chosen" });
       }
-    
+
       if (job.chosenApplicant === student) {
         return res.status(402).json({ error: "Already chosen" });
       }
-      job.chosenApplicant = student;
-      job.status = "Closed";
 
+      const updatedJobApplicants = job.applicants.filter(
+        (applicant) => applicant.toString() !== student
+      );
+
+      job.applicants = updatedJobApplicants;
       await job.save();
+
       return res.status(200).json({ job });
     } catch (error) {
       return res.status(403).json({ error: error.message });
