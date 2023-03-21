@@ -59,7 +59,7 @@ const Profile = (props) => {
           className="bg-slate-500 rounded hover:outline outline-2 p-2 mt-5"
           onClick={() => signOut()}
         >
-          SignOut
+          Sign Out
         </button>
 
         <Link href="/profile/edit">

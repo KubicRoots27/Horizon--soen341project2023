@@ -53,6 +53,23 @@ const JobPostings = () => {
             <span className="font-bold">Description: </span>
             {jobPosting.description}
           </p>
+          <p>
+            <span className="font-bold">Status: </span>
+            {jobPosting.status}
+          </p>
+          <p>
+            <span className="font-bold">Company: </span>
+            {jobPosting.company}
+          </p>
+          <p>
+            <span className="font-bold">Location: </span>
+            {jobPosting.location}
+          </p>
+          <p>
+            <span className="font-bold">Salary: </span>
+            {jobPosting.salary}
+          </p>
+
           <Link href={`/jobpostings/${jobPosting._id}`}>
             <button className="bg-slate-500 rounded hover:outline outline-2 p-2 mt-2">
               View Job Posting
