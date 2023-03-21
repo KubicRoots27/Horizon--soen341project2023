@@ -51,6 +51,8 @@ const Profile = (props) => {
           Email: {session.user.email}
           <br />
           Account Type: {capitalizeFirstLetter(session.user.accountType)}
+          <br />
+          Company Name: {session.user.companyName}
         </div>
 
         <button

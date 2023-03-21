@@ -2,9 +2,12 @@ import React from "react";
 import { Formik, Field, Form } from "formik";
 import { useRouter } from "next/router";
 import Link from "next/link";
+import { useState } from "react";
 
 const Signup = () => {
   const router = useRouter();
+  const [showCompanyNameInput, setShowCompanyNameInput] = useState(false);
+
   return (
     <div>
       <div className="h-screen bg-pastel_green">
@@ -17,6 +20,7 @@ const Signup = () => {
               lname: "",
               email: "",
               accountType: "",
+              companyName: "",
               password: "",
               password2: "",
             }}
@@ -44,6 +48,18 @@ const Signup = () => {
               // Account type
               if (!values.accountType) {
                 errors.accountType = "Required";
+              }
+
+              // Company name
+              if (values.accountType === "employer") {
+                setShowCompanyNameInput(true);
+              } else {
+                setShowCompanyNameInput(false);
+              }
+              if (showCompanyNameInput) {
+                if (!values.companyName) {
+                  errors.companyName = "Required";
+                }
               }
 
               // Password
@@ -132,6 +148,19 @@ const Signup = () => {
                     <div className="text-red-500">{errors.accountType}</div>
                   ) : null}
                 </div>
+                {showCompanyNameInput ? (
+                  <div className="pb-3">
+                    <Field
+                      name="companyName"
+                      placeholder="Company name"
+                      type="text"
+                      className="outline-2 outline-slate-400 bg-slate-200 rounded-md p-1"
+                    />
+                    {errors.companyName && touched.companyName ? (
+                      <div className="text-red-500">{errors.companyName}</div>
+                    ) : null}
+                  </div>
+                ) : null}
 
                 <div className="pb-3">
                   <Field

@@ -1,6 +1,5 @@
 import { Schema, model, models } from "mongoose";
 
-
 const UserSchema = new Schema({
   fname: {
     type: String,
@@ -19,6 +18,9 @@ const UserSchema = new Schema({
     type: String,
     required: true,
     enum: ["employer", "student", "admin"],
+  },
+  companyName: {
+    type: String,
   },
   password: {
     type: String,
@@ -43,4 +45,3 @@ const UserSchema = new Schema({
 const Users = models.user || model("user", UserSchema);
 
 export default Users;
-

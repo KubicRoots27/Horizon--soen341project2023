@@ -14,7 +14,7 @@ export default async function handler(req, res) {
       }
 
       // Destructure the request body
-      let { fname, lname, email, accountType, password } = req.body;
+      let { fname, lname, email, accountType, companyName, password } = req.body;
 
       // Check duplicate user
       const checkexisting = await Users.findOne({ email: req.body.email });
@@ -29,6 +29,7 @@ export default async function handler(req, res) {
           lname,
           email,
           accountType,
+          companyName,
           password: await hash(password, 12),
         },
         function (err, data) {
