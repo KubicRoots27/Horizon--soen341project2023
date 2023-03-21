@@ -60,7 +60,7 @@ const JobPosting = ({ jobPosting }) => {
   }
 
   return (
-    <div className="flex flex-col justify-center items-center bg-[#f1f1f1] w-fit mx-auto h-fit mt-20 p-5 rounded-md shadow-md">
+    <div className="flex flex-col justify-center items-center bg-[#f1f1f1] w-2/3 mx-auto h-fit mt-20 p-5 rounded-md shadow-md">
       <div className="text-2xl font-bold">Job Posting: {jobPosting.title}</div>
       <div>
         Description: {jobPosting.description}
