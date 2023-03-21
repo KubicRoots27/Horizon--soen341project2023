@@ -57,7 +57,7 @@ front end, back end, full stack
 | 20 | 4 | Arshpreet | Managing the acount credentials/security for the users as an admin|
 | 21 | 4 | Arshpreet | Managing and providing Technical support to users  |
 
-## Plan for next Sprint
+
 
 
 
@@ -98,3 +98,7 @@ SPRINT 3
 | 12 |   | Bachar  | Error messages style |
 | 13 |   |   | |
 
+## Plan for next Sprint
+SPRINT 4
+| Task | Corresponding Story | Person assigned | Task Description |
+| ----------- | ----------- | ----------- | ----------- |
