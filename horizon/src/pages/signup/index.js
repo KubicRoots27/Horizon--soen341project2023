@@ -10,9 +10,9 @@ const Signup = () => {
 
   return (
     <div>
-      <div className="h-screen bg-pastel_green">
-        <div className="w-fit mx-auto pt-96">
-          <h1 className="text-3xl font-bold pb-3">Signup</h1>
+      <div className="flex justify-center bg-lime-600 h-26 p-16">
+        <div className="bg-white shadow-md rounded-md p-16 w-1/3 pb-8">
+          <h1 className="text-3xl text-center font-bold pb-3">Sign Up</h1>
 
           <Formik
             initialValues={{
@@ -95,13 +95,13 @@ const Signup = () => {
             }}
           >
             {({ errors, touched }) => (
-              <Form>
+              <Form className="text-center">
                 <div className="pb-3">
                   <Field
                     name="fname"
                     placeholder="First name"
                     type="text"
-                    className="outline-2 outline-slate-400 bg-slate-200 rounded-md p-1"
+                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                   />
                   {errors.fname && touched.fname ? (
                     <div className="text-red-500">{errors.fname}</div>
@@ -113,7 +113,7 @@ const Signup = () => {
                     name="lname"
                     placeholder="Last name"
                     type="text"
-                    className="outline-2 outline-slate-400 bg-slate-200 rounded-md p-1"
+                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                   />
                   {errors.lname && touched.lname ? (
                     <div className="text-red-500">{errors.lname}</div>
@@ -125,7 +125,7 @@ const Signup = () => {
                     name="email"
                     placeholder="Email"
                     type="text"
-                    className="outline-2 outline-slate-400 bg-slate-200 rounded-md p-1"
+                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                   />
                   {errors.email && touched.email ? (
                     <div className="text-red-500">{errors.email}</div>
@@ -137,7 +137,7 @@ const Signup = () => {
                     name="accountType"
                     placeholder="Account type"
                     as="select"
-                    className="outline-2 outline-slate-400 bg-slate-200 rounded-md p-1"
+                    className="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline"
                   >
                     <option value="">Select account type</option>
                     <option value="student">Student</option>
@@ -154,7 +154,7 @@ const Signup = () => {
                       name="companyName"
                       placeholder="Company name"
                       type="text"
-                      className="outline-2 outline-slate-400 bg-slate-200 rounded-md p-1"
+                      className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                     />
                     {errors.companyName && touched.companyName ? (
                       <div className="text-red-500">{errors.companyName}</div>
@@ -167,37 +167,37 @@ const Signup = () => {
                     name="password"
                     placeholder="Password"
                     type="password"
-                    className="outline-2 outline-slate-400 bg-slate-200 rounded-md p-1"
+                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                   />
                   {errors.password && touched.password ? (
                     <div className="text-red-500">{errors.password}</div>
                   ) : null}
                 </div>
 
-                <div className="pb-3">
+                <div className="pb-6">
                   <Field
                     name="password2"
                     placeholder="Confirm password"
                     type="password"
-                    className="outline-2 outline-slate-400 bg-slate-200 rounded-md p-1"
+                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                   />
                   {errors.password2 && touched.password2 ? (
                     <div className="text-red-500">{errors.password2}</div>
                   ) : null}
                 </div>
 
-                <button type="submit" className="bg-slate-400 rounded-md px-3">
-                  Signup
+                <button type="submit" className="focus:shadow-outline rounded bg-lime-600 py-2 px-4 font-bold text-white hover:bg-lime-800 focus:outline-none">
+                  Sign up
                 </button>
               </Form>
             )}
           </Formik>
-        </div>
-        <div className="w-fit mx-auto pt-3">
+          <div className="w-fit mx-auto pt-12">
           Already have an account?{" "}
           <Link className="text-blue-600" href="/login">
             Login
           </Link>
+        </div>
         </div>
       </div>
     </div>
