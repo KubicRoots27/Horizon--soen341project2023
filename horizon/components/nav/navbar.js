@@ -17,7 +17,7 @@ const Navbar = () => {
     <header>
       <nav className={`nav`}>
         <Link href={"/"}>
-          <h1 className="logo">Logo</h1>
+          <Image src="logo.svg" alt="Horizon Logo" width={100} height={100} />
         </Link>
         <div
           onClick={() => setNavActive(!navActive)}
