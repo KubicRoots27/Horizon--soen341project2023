@@ -13,7 +13,6 @@ const Signup = () => {
       <div className="flex justify-center bg-lime-600 h-26 p-16">
         <div className="bg-white shadow-md rounded-md p-16 w-1/3 pb-8">
           <h1 className="text-3xl text-center font-bold pb-3">Sign Up</h1>
-
           <Formik
             initialValues={{
               fname: "",
