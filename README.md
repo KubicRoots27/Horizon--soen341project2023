@@ -97,7 +97,8 @@ SPRINT 3
 | 11 |   | Bachar  | Styling of click buttons |
 | 12 |   | Bachar  | Error messages style |
 | 13 |   |  Arshpreet |Logo and navbar |
-
+| 14 |   |  Sarmad |styling of Student profile editing page |
+| 15 |   |  Sarmad |styling of job posting page |
 ## Plan for next Sprint
 SPRINT 4
 | Task | Corresponding Story | Person assigned | Task Description |
