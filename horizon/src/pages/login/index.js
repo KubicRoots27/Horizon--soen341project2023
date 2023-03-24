@@ -3,7 +3,6 @@ import { Formik, Field, Form } from "formik";
 import { useSession, signIn, signOut } from "next-auth/react";
 import { useRouter } from "next/router";
 import Link from "next/link";
-import KUTE from "kute.js";
 
 const Login = () => {
   const router = useRouter();
