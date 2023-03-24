@@ -185,7 +185,7 @@ const Signup = () => {
                   ) : null}
                 </div>
 
-                <button type="submit" className="focus:shadow-outline rounded bg-cyan-700 py-2 px-4 font-bold text-white hover:bg-cyan-900 focus:outline-none">
+                <button type="submit" className="focus:shadow-outline rounded bg-cyan-600 py-2 px-4 font-bold text-white hover:bg-cyan-800 focus:outline-none">
                   Sign up
                 </button>
               </Form>
