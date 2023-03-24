@@ -9,8 +9,8 @@ const Login = () => {
   
   return (
     <div className="flex justify-center bg-cyan-600 h-26 p-16">
-      <div className="bg-white shadow-md rounded-md p-16 pb-8">
-        <h1 className="text-3xl font-bold text-center pb-6">Login</h1>
+      <div className="bg-white dark:bg-black shadow-md rounded-md p-16 pb-8">
+        <h1 className="text-3xl dark:text-white font-bold text-center pb-6">Login</h1>
         <Formik
           initialValues={{ username: "", password: "" }}
           onSubmit={async (values) => {
