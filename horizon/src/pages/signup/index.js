@@ -10,7 +10,7 @@ const Signup = () => {
 
   return (
     <div>
-      <div className="flex justify-center bg-lime-600 h-26 p-16">
+      <div className="flex justify-center bg-cyan-600 h-26 p-16">
         <div className="bg-white shadow-md rounded-md p-16 w-1/3 pb-8">
           <h1 className="text-3xl text-center font-bold pb-3">Sign Up</h1>
           <Formik
@@ -185,7 +185,7 @@ const Signup = () => {
                   ) : null}
                 </div>
 
-                <button type="submit" className="focus:shadow-outline rounded bg-lime-600 py-2 px-4 font-bold text-white hover:bg-lime-800 focus:outline-none">
+                <button type="submit" className="focus:shadow-outline rounded bg-cyan-600 py-2 px-4 font-bold text-white hover:bg-cyan-800 focus:outline-none">
                   Sign up
                 </button>
               </Form>
