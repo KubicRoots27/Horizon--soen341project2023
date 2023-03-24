@@ -9,7 +9,7 @@ const Login = () => {
   
   return (
     <div className="flex justify-center bg-cyan-600 dark:bg-cyan-900 h-26 p-16">
-      <div className="bg-white dark:bg-black shadow-md rounded-md p-16 pb-8">
+      <div className="bg-white dark:bg-slate-900 shadow-md rounded-md p-16 pb-8">
         <h1 className="text-3xl dark:text-white font-bold text-center pb-6">Login</h1>
         <Formik
           initialValues={{ username: "", password: "" }}
@@ -54,7 +54,7 @@ const Login = () => {
         </Formik>
         <div></div>
         <div className="flex justify-center items-center pt-12">
-          <div className="w-fit mx-auto">
+          <div className="w-fit mx-auto dark:text-white">
             Don't have an account?{" "}
             <Link className="text-cyan-700" href="/signup">
               Register
