@@ -20,20 +20,20 @@ front end, back end, full stack
 
 ## User stories
 1. As a student, I want to be able to create an account and log in to the platform so that I can access job postings and create my own profile. <br />
-Risks:
-Insecure account creation and login process
-Privacy concerns with profile data
-Story Points: 5
+Risks: <br />
+Insecure account creation and login process <br />
+Privacy concerns with profile data <br />
+Story Points: 5 <br />
 
-2. As an employer, I want to be able to post job openings on the platform and review candidate applications so that I can find suitable candidates for my company. 
-Risks:
-Duplicate or spam job postings
-Unqualified candidates applying for jobs
-Story Points: 5
+2. As an employer, I want to be able to post job openings on the platform and review candidate applications so that I can find suitable candidates for my company. <br />
+Risks: <br />
+Duplicate or spam job postings <br />
+Unqualified candidates applying for jobs <br />
+Story Points: 5 <br />
 
 
-3. As a recruiter, I want to be able to create an account and search for employees that I can link with my clients. 
-Risks:
+3. As a recruiter, I want to be able to create an account and search for employees that I can link with my clients. <br />
+Risks: <br />
 Privacy concerns with employee data
 Misuse of platform by unscrupulous recruiters
 Story Points: 3
