@@ -33,9 +33,10 @@ const EditProfile = () => {
     );
   }
   return (
-    <div className="h-screen bg-pastel_green">
-      <div className="w-fit mx-auto pt-96">
-        <h1 className="text-3xl font-bold pb-3">Edit Profile</h1>
+      <div className="bg-blue-300 min-h-screen text-black min-h-screen">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8"></div>
+        <div className="w-fit m-auto py-14 px-4">
+        <h1 className="text-3xl text-center font-extrabold text-gray-900 mb-8">Edit Your Profile</h1>
 
         <Formik
           initialValues={{
@@ -91,33 +92,33 @@ const EditProfile = () => {
               name="fname"
               placeholder="First name"
               type="text"
-              className="flex outline-2 outline-slate-400 bg-slate-200 rounded-md p-1 mb-2"
+              className="flex outline-2 outline-slate-400 bg-slate-200 rounded-md p-3 mb-3"
             />
             <Field
               name="lname"
               placeholder="Last name"
               type="text"
-              className="flex outline-2 outline-slate-400 bg-slate-200 rounded-md p-1 mb-2"
+              className="flex outline-2 outline-slate-400 bg-slate-200 rounded-md p-3 mb-3"
             />
             <Field
               name="email"
               placeholder="Email"
               type="text"
-              className="flex outline-2 outline-slate-400 bg-slate-200 rounded-md p-1 mb-2"
+              className="flex outline-2 outline-slate-400 bg-slate-200 rounded-md p-3 mb-3"
             />
             <Field
               name="password"
               placeholder="Password"
               type="password"
-              className="flex outline-2 outline-slate-400 bg-slate-200 rounded-md p-1 mb-2"
+              className="flex outline-2 outline-slate-400 bg-slate-200 rounded-md p-3 mb-3"
             />
             <Field
               name="password2"
               placeholder="Confirm password"
               type="password"
-              className="flex outline-2 outline-slate-400 bg-slate-200 rounded-md p-1 mb-2"
+              className="flex outline-2 outline-slate-400 bg-slate-200 rounded-md p-3 mb-3"
             />
-            <button type="submit" className="bg-slate-400 rounded-md px-3">
+            <button type="submit" className="px-5 py-5 bg-indigo-700 text-white rounded-lg shadow-md hover:bg-blue-600 transition-colors duration-300 ease-in-out">
               Edit
             </button>
           </Form>
