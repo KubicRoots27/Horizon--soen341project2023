@@ -22,96 +22,93 @@ front end, back end, full stack
 1. As a student, I want to be able to create an account and log in to the platform so that I can access job postings and create my own profile.
 
 ### Risks:
-
 Insecure account creation and login process
-
 Privacy concerns with profile data
-
 Story Points: 5
 
 2. As an employer, I want to be able to post job openings on the platform and review candidate applications so that I can find suitable candidates for my company.
-#Risks:
+### Risks:
 Duplicate or spam job postings
 Unqualified candidates applying for jobs
 Story Points: 5
 
 
 3. As a recruiter, I want to be able to create an account and search for employees that I can link with my clients.
-#Risks:
+### Risks:
 Privacy concerns with employee data
 Misuse of platform by unscrupulous recruiters
 Story Points: 3
 
 
 4. As an admin, I want to be able to manage user profiles and postings on the platform so that I can ensure that the platform is running smoothly.
-#Risks:
+### Risks:
 Unauthorized access to admin functions
 Inadequate tools for monitoring and moderation
 Story Points: 5
 
 
 5. As a student, I want to be able to save job postings to my favorites to be able to see any changes made.
-#Risks:
+### Risks:
 Inability to track changes in job postings
 Inconsistent display of saved job postings
 Story Points: 3
 
 
 6. As a student, I want to be able to apply for job postings and let the employer aware of my interest.
-#Risks:
+### Risks:
 Difficulty tracking applications
 Poor user experience when applying for jobs
 Story Points: 3
 
 
 7. As an employer, I want to be able to accept or decline a user’s application
-#Risks:
+### Risks:
 Inefficient application management
 Unintentional bias during application review
 Story Points: 3
 
 8. As an employer, I want to be able to link a youtube video to my job posting
-#Risks:
+### Risks:
 Inappropriate video content
 Issues with video playback
 Story Points: 2
 
 
 9. As a student I want to be able to link my linkedin account
-#Risks:
+### Risks:
 Privacy concerns with LinkedIn integration
 Inaccurate or outdated information from LinkedIn
 Story Points: 3
 
 
 10. As a user I want to be able to edit my profile
-#Risks:
+### Risks:
 Unauthorized profile editing
 Loss of profile data during editing
 Story Points: 2
 
 
 11. As an employer, I want to be able to click on the applicants profile
-Risks:
+### Risks:
 Difficulty accessing applicant profiles
 Privacy concerns when viewing applicant profiles
 Story Points: 2
 
 
 12. As an employer I want to be able to delete a job posting
-#Risks:
+### Risks:
 Unintentional deletion of job postings
 Difficulty managing active and deleted job postings
 Story Points: 2
 
 13. As a user, I want to be able to change between light and dark theme
-#Risks:
+### Risks:
 Hidden content
 Readability of content affected
 Story points: 3
 
 14. As a developper, I want to be able to run a test suit to verify API end points 
-#Risks:
+### Risks:
 Not testing every end point 
 False acceptance test
 Story points: 4
