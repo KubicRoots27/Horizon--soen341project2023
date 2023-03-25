@@ -19,20 +19,20 @@ front end, back end, full stack
 - CSS or Tailwind
 
 ## User stories
-1. As a student, I want to be able to create an account and log in to the platform so that I can access job postings and create my own profile.
+1. As a student, I want to be able to create an account and log in to the platform so that I can access job postings and create my own profile. 
 Risks:
 Insecure account creation and login process
 Privacy concerns with profile data
 Story Points: 5
 
-2. As an employer, I want to be able to post job openings on the platform and review candidate applications so that I can find suitable candidates for my company.
+2. As an employer, I want to be able to post job openings on the platform and review candidate applications so that I can find suitable candidates for my company. 
 Risks:
 Duplicate or spam job postings
 Unqualified candidates applying for jobs
 Story Points: 5
 
 
-3. As a recruiter, I want to be able to create an account and search for employees that I can link with my clients.
+3. As a recruiter, I want to be able to create an account and search for employees that I can link with my clients. 
 Risks:
 Privacy concerns with employee data
 Misuse of platform by unscrupulous recruiters
