@@ -20,9 +20,13 @@ front end, back end, full stack
 
 ## User stories
 1. As a student, I want to be able to create an account and log in to the platform so that I can access job postings and create my own profile.
-#Risks:
+
+# Risks:
+
 Insecure account creation and login process
+
 Privacy concerns with profile data
+
 Story Points: 5
 
 2. As an employer, I want to be able to post job openings on the platform and review candidate applications so that I can find suitable candidates for my company.
