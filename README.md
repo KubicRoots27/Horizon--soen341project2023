@@ -19,7 +19,7 @@ front end, back end, full stack
 - CSS or Tailwind
 
 ## User stories
-1. As a student, I want to be able to create an account and log in to the platform so that I can access job postings and create my own profile. 
+1. As a student, I want to be able to create an account and log in to the platform so that I can access job postings and create my own profile. <br />
 Risks:
 Insecure account creation and login process
 Privacy concerns with profile data
