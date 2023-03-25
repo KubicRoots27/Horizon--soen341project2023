@@ -34,83 +34,83 @@ Story Points: 5 <br />
 
 3. As a recruiter, I want to be able to create an account and search for employees that I can link with my clients. <br />
 Risks: <br />
-Privacy concerns with employee data
-Misuse of platform by unscrupulous recruiters
-Story Points: 3
+Privacy concerns with employee data <br />
+Misuse of platform by unscrupulous recruiters <br />
+Story Points: 3 <br />
 
 
-4. As an admin, I want to be able to manage user profiles and postings on the platform so that I can ensure that the platform is running smoothly.
-Risks:
-Unauthorized access to admin functions
-Inadequate tools for monitoring and moderation
-Story Points: 5
+4. As an admin, I want to be able to manage user profiles and postings on the platform so that I can ensure that the platform is running smoothly. <br />
+Risks: <br />
+Unauthorized access to admin functions <br />
+Inadequate tools for monitoring and moderation <br />
+Story Points: 5 <br />
 
 
-5. As a student, I want to be able to save job postings to my favorites to be able to see any changes made.
-Risks:
-Inability to track changes in job postings
-Inconsistent display of saved job postings
-Story Points: 3
+5. As a student, I want to be able to save job postings to my favorites to be able to see any changes made. <br />
+Risks: <br />
+Inability to track changes in job postings <br />
+Inconsistent display of saved job postings <br />
+Story Points: 3 <br />
 
 
-6. As a student, I want to be able to apply for job postings and let the employer aware of my interest.
-Risks:
-Difficulty tracking applications
-Poor user experience when applying for jobs
-Story Points: 3
+6. As a student, I want to be able to apply for job postings and let the employer aware of my interest. <br />
+Risks: <br />
+Difficulty tracking applications <br />
+Poor user experience when applying for jobs <br />
+Story Points: 3 <br />
 
 
-7. As an employer, I want to be able to accept or decline a user’s application
-Risks:
-Inefficient application management
-Unintentional bias during application review
-Story Points: 3
+7. As an employer, I want to be able to accept or decline a user’s application <br />
+Risks: <br />
+Inefficient application management <br />
+Unintentional bias during application review <br />
+Story Points: 3 <br />
 
-8. As an employer, I want to be able to link a youtube video to my job posting
-Risks:
-Inappropriate video content
-Issues with video playback
-Story Points: 2
-
-
-9. As a student I want to be able to link my linkedin account
-Risks:
-Privacy concerns with LinkedIn integration
-Inaccurate or outdated information from LinkedIn
-Story Points: 3
+8. As an employer, I want to be able to link a youtube video to my job posting <br />
+Risks: <br />
+Inappropriate video content <br />
+Issues with video playback <br />
+Story Points: 2 <br />
 
 
-10. As a user I want to be able to edit my profile
-Risks:
-Unauthorized profile editing
-Loss of profile data during editing
-Story Points: 2
+9. As a student I want to be able to link my linkedin account <br />
+Risks: <br />
+Privacy concerns with LinkedIn integration <br />
+Inaccurate or outdated information from LinkedIn <br />
+Story Points: 3 <br />
 
 
-11. As an employer, I want to be able to click on the applicants profile
-Risks:
-Difficulty accessing applicant profiles
-Privacy concerns when viewing applicant profiles
-Story Points: 2
+10. As a user I want to be able to edit my profile <br />
+Risks: <br />
+Unauthorized profile editing <br />
+Loss of profile data during editing <br />
+Story Points: 2 <br />
 
 
-12. As an employer I want to be able to delete a job posting
-Risks:
-Unintentional deletion of job postings
-Difficulty managing active and deleted job postings
-Story Points: 2
+11. As an employer, I want to be able to click on the applicants profile <br />
+Risks: <br />
+Difficulty accessing applicant profiles <br />
+Privacy concerns when viewing applicant profiles <br />
+Story Points: 2 <br />
 
-13. As a user, I want to be able to change between light and dark theme
-Risks:
-Hidden content
-Readability of content affected
-Story points: 3
 
-14. As a developper, I want to be able to run a test suit to verify API end points 
-Risks:
-Not testing every end point 
-False acceptance test
-Story points: 4
+12. As an employer I want to be able to delete a job posting <br />
+Risks: <br />
+Unintentional deletion of job postings <br />
+Difficulty managing active and deleted job postings <br />
+Story Points: 2 <br />
+
+13. As a user, I want to be able to change between light and dark theme <br />
+Risks: <br />
+Hidden content <br />
+Readability of content affected <br />
+Story points: 3 <br />
+
+14. As a developper, I want to be able to run a test suit to verify API end points  <br />
+Risks: <br />
+Not testing every end point  <br />
+False acceptance test <br />
+Story points: 4 <br />
 
 
 ## Task Breakdown
