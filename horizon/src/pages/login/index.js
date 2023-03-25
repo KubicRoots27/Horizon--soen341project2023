@@ -8,8 +8,8 @@ const Login = () => {
   const router = useRouter();
   
   return (
-    <div className="flex justify-center bg-cyan-600 dark:bg-cyan-900 h-26 p-16">
-      <div className="bg-white dark:bg-slate-900 shadow-md rounded-md p-16 pb-8">
+    <div className="flex justify-center bg-white dark:bg-slate-900 h-26 p-16">
+      <div className="bg-cyan-100 dark:bg-cyan-900 shadow-md rounded-md p-16 pb-8">
         <h1 className="text-3xl dark:text-white font-bold text-center pb-6">Login</h1>
         <Formik
           initialValues={{ username: "", password: "" }}
@@ -46,7 +46,7 @@ const Login = () => {
             </div>
             <button
               type="submit"
-              className="focus:shadow-outline rounded bg-cyan-600 py-2 px-4 font-bold text-white hover:bg-cyan-800 focus:outline-none"
+              className="focus:shadow-outline rounded bg-teal-500 py-2 px-4 font-bold text-white hover:bg-teal-700 focus:outline-none"
             >
               Login
             </button>
