@@ -45,12 +45,15 @@ nav {
   top: 60px;
   width: 288px;
   row-gap: 24px;
-  right: -288px;
+  right: 0;
+  left: auto;
   padding: 24px 16px;
   transition: all 0.2s;
   min-height: calc(100vh - 60px);
   background-color: #f1f1f1;
-}
+  } 
+  
+  
 .nav__menu-list.active {
   right: 0;
 }
@@ -96,4 +99,14 @@ nav {
   .nav__link:hover:before {
     width: 100%;
   }
+
+  
+  .logo {
+    width: 100px; /* adjust as needed */
+    height: auto; /* adjust as needed */
+  }
+  .logo_container.my-component .my-image {
+    float: left;
+  }
+  
 }
