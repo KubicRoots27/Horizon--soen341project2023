@@ -10,8 +10,8 @@ const Signup = () => {
 
   return (
     <div>
-      <div className="flex justify-center bg-cyan-600 dark:bg-cyan-900 h-26 p-16">
-        <div className="bg-white dark:bg-slate-900 shadow-md rounded-md p-16 w-1/3 pb-8">
+      <div className="flex justify-center bg-white dark:bg-slate-900 h-26 p-16">
+        <div className="bg-cyan-600 dark:bg-cyan-900 shadow-md rounded-md p-16 w-1/3 pb-8">
           <h1 className="text-3xl text-center dark:text-white font-bold pb-3">Sign Up</h1>
           <Formik
             initialValues={{
@@ -185,7 +185,7 @@ const Signup = () => {
                   ) : null}
                 </div>
 
-                <button type="submit" className="focus:shadow-outline rounded bg-cyan-600 py-2 px-4 font-bold text-white hover:bg-cyan-800 focus:outline-none">
+                <button type="submit" className="focus:shadow-outline rounded bg-cyan-500 py-2 px-4 font-bold text-white hover:bg-cyan-700 focus:outline-none">
                   Sign up
                 </button>
               </Form>
@@ -193,7 +193,7 @@ const Signup = () => {
           </Formik>
           <div className="w-fit mx-auto dark:text-white pt-12">
           Already have an account?{" "}
-          <Link className="text-blue-600" href="/login">
+          <Link className="text-blue-700" href="/login">
             Login
           </Link>
         </div>
