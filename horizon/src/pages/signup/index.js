@@ -7,7 +7,7 @@ import { useState } from "react";
 const Signup = () => {
   const router = useRouter();
   const [showCompanyNameInput, setShowCompanyNameInput] = useState(false);
-
+//return value
   return (
     <div>
       <div className="h-screen bg-pastel_green">
