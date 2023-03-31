@@ -173,9 +173,9 @@ SPRINT 3
 | 7 |  1 | Christina | Improve log in and sign up validation|
 | 8 | N/A  | Christina  | Testing of website, database|
 | 9 |   | Mario | Styling of register page |
-| 10 |   | Bachar  | texts size and fonts |
-| 11 |   | Bachar  | Styling of click buttons |
-| 12 |   | Bachar  | Error messages style |
+| 10 | 15  | Bachar  | texts size and fonts |
+| 11 |  15 | Bachar  | Styling of click buttons |
+| 12 | 15  | Bachar  | Error messages style |
 | 13 |   |  Arshpreet |Fixing navbar functioning |
 | 14 |   |  Arshpreet |Styling of navbar |
 | 15 |   |  Arshpreet |Styling of Logo |
