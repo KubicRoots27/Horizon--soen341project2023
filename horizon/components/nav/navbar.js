@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import React, { useState } from "react";
+import logo from "../../public/logo.svg";
 
 import NavItem from "./navitem";
 
@@ -17,7 +18,7 @@ const Navbar = () => {
     <header>
       <nav className={`nav`}>
         <Link href={"/"}>
-          <Image src="logo.svg" alt="Horizon Logo" width={100} height={100} />
+          <Image src={logo} alt="Horizon Logo" width={100} height={100} />
         </Link>
         <div
           onClick={() => setNavActive(!navActive)}

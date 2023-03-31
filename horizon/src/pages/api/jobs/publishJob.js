@@ -8,6 +8,8 @@ function trimTrailingWhitespace(str) {
 export default async function handler(req, res) {
   // connectDB("Users").catch((error) => res.json({ error: error.message }));
 
+  console.log(req.body);
+
   if (req.method === "POST") {
     // Empty body exception
     if (!req.body) {
@@ -15,7 +17,7 @@ export default async function handler(req, res) {
     }
 
     // Destructure the request body
-    let { title, description, location, videoId, salary, employer } = req.body;
+    let { title, description, location, videoId, salary, employerId, companyName } = req.body;
 
     // Trim trailing whitespace
     title = trimTrailingWhitespace(title);
@@ -23,7 +25,8 @@ export default async function handler(req, res) {
     location = trimTrailingWhitespace(location);
     videoId = trimTrailingWhitespace(videoId);
     salary = trimTrailingWhitespace(salary);
-    employer = trimTrailingWhitespace(employer);
+    employerId = trimTrailingWhitespace(employerId);
+    companyName = trimTrailingWhitespace(companyName);
 
     console.log(req.body);
 
@@ -35,7 +38,8 @@ export default async function handler(req, res) {
         location,
         videoId,
         salary,
-        employer,
+        employerId,
+        companyName,
       },
       function (err, data) {
         if (err) {

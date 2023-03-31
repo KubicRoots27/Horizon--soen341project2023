@@ -24,7 +24,7 @@ const EmployerDashboard = () => {
 
           if (data.jobs !== undefined) {
             const filteredData = data.jobs.filter(
-              (job) => job.employer === userId
+              (job) => job.employerId === userId
             );
             setJobPostings(filteredData);
           }
