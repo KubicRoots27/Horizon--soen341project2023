@@ -17,6 +17,10 @@ const UserSchema = new Schema({
   accountType: {
     type: String,
     required: true,
+    enum: ["employer", "student", "admin"],
+  },
+  companyName: {
+    type: String,
   },
   password: {
     type: String,
@@ -25,6 +29,16 @@ const UserSchema = new Schema({
   dateCreated: {
     type: Date,
     default: Date.now,
+  },
+  jobOffers: {
+    type: [Schema.Types.ObjectId],
+    ref: "Job",
+    default: [],
+  },
+  jobApplications: {
+    type: [Schema.Types.ObjectId],
+    ref: "Job",
+    default: [],
   },
 });
 
