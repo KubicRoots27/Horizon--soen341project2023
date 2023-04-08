@@ -13,7 +13,9 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Install dependencies
+        working-directory: ./horizon
         run: npm install
 
       - name: Start server and run tests
-        run: cd horizon && npm run e2e:headless
+        working-directory: ./horizon
+        run: npm run e2e:headless
