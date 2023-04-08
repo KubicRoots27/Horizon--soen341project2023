@@ -1,0 +1,19 @@
+name: Cypress Tests
+
+on:
+  push:
+    branches:
+      - christina-dev
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Start server and run tests
+        run: cd horizon && npm run e2e:headless
