@@ -26,6 +26,7 @@ nav {
   align-items: center;
   background-color: #f1f1f1;
 }
+
 .nav__menu-bar {
   display: flex;
   flex-direction: column;
@@ -47,7 +48,7 @@ nav {
   row-gap: 24px;
   right: -288px;
   padding: 24px 16px;
-  transition: all 0.2s;
+
   min-height: calc(100vh - 60px);
   background-color: #f1f1f1;
 }
@@ -57,7 +58,6 @@ nav {
 .nav__link {
   font-size: 18px;
   position: relative;
-  transition: all 0.2s;
 }
 
 .nav__link:hover {
@@ -90,10 +90,13 @@ nav {
     bottom: -16px;
     left: 0;
     background-color: black;
-    transition: all 0.2s;
   }
 
   .nav__link:hover:before {
     width: 100%;
   }
+}
+
+.nav_dark {
+  background-color: #a9a9a9;
 }

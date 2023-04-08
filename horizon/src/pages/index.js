@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import KUTE from "kute.js";
 
-export default function Home(props) {
+export default function Home({ theme }) {
   const firstSVGRef = useRef(null);
   const secondSVGRef = useRef(null);
 
@@ -44,7 +44,13 @@ export default function Home(props) {
           xmlnsXlink="http://www.w3.org/1999/xlink"
           ref={firstSVGRef}
         >
-          <rect x="0" y="0" width="900" height="500" fill="#fff"></rect>
+          <rect
+            x="0"
+            y="0"
+            width="900"
+            height="500"
+            fill={`${theme === "dark" ? "#475569" : "#fff"}`}
+          ></rect>
           <g transform="translate(900, 500)">
             <path
               d="M-270.4 0C-269.4 -38.1 -268.4 -76.3 -249.8 -103.5C-231.3 -130.7 -195.3 -147 -168.3 -168.3C-141.3 -189.6 -123.4 -215.9 -96.8 -233.7C-70.3 -251.6 -35.1 -261 0 -270.4L0 0Z"

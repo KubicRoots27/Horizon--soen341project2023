@@ -74,7 +74,7 @@ const EmployerDashboard = () => {
   }
 
   return (
-    <div>
+    <div className="h-screen">
       <Card width="w-3/4 lg:w-3/4">
         <div className="text-2xl font-bold text-russian_green">
           Current Job Postings:

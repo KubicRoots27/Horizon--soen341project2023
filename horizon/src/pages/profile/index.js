@@ -8,7 +8,7 @@ function capitalizeFirstLetter(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
-const Profile = (props) => {
+const Profile = ({ theme }) => {
   const router = useRouter();
   const { data: session, status } = useSession();
 
@@ -38,8 +38,12 @@ const Profile = (props) => {
   }
 
   return (
-    <>
-      <div className="bg-[#f1f1f1] w-2/3 mx-auto h-fit mt-20 p-5 rounded-md shadow-md">
+    <div className="h-screen">
+      <div
+        className={`${
+          theme === "dark" ? "nav_dark" : "bg-[#f1f1f1]"
+        } w-2/3 mx-auto mt-20 p-5 rounded-md shadow-md h-fit`}
+      >
         <div className="text-2xl font-bold mb-5">
           Welcome {session.user.fname}, you are logged in!
         </div>
@@ -92,7 +96,7 @@ const Profile = (props) => {
           </Link>
         )}
       </div>
-    </>
+    </div>
   );
 };
 

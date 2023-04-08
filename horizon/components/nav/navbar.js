@@ -10,13 +10,17 @@ const MENU_LIST = [
   { text: "Profile", href: "/profile" },
   { text: "Job Postings", href: "/jobpostings" },
 ];
-const Navbar = () => {
+const Navbar = (props) => {
   const [navActive, setNavActive] = useState(null);
   const [activeIdx, setActiveIdx] = useState(-1);
 
+  const [darkMode, setDarkMode] = useState(false);
+
+  props.theme(darkMode ? "dark" : "light");
+
   return (
     <header>
-      <nav className={`nav`}>
+      <nav className={`nav ${darkMode ? "nav_dark" : ""}`}>
         <Link href={"/"}>
           <Image src={logo} alt="Horizon Logo" width={100} height={100} />
         </Link>
@@ -28,7 +32,11 @@ const Navbar = () => {
           <div></div>
           <div></div>
         </div>
-        <div className={`${navActive ? "active" : ""} nav__menu-list`}>
+        <div
+          className={`${navActive ? "active" : ""} nav__menu-list ${
+            darkMode ? "nav_dark" : ""
+          }`}
+        >
           {MENU_LIST.map((menu, idx) => (
             <div
               onClick={() => {
@@ -40,6 +48,16 @@ const Navbar = () => {
               <NavItem active={activeIdx === idx} {...menu} />
             </div>
           ))}
+        </div>
+        <div className="rounded-md px-2 py-1 bg-slate-400 hover:outline outline-2">
+          <button
+            onClick={() => {
+              setDarkMode(!darkMode);
+              document.body.classList.toggle("dark");
+            }}
+          >
+            Enable {darkMode ? "Light" : "Dark"} Mode
+          </button>
         </div>
       </nav>
     </header>

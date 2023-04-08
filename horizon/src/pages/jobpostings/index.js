@@ -2,7 +2,7 @@ import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import { useSession } from "next-auth/react";
 
-const JobPostings = () => {
+const JobPostings = ({ theme }) => {
   const { data: session, status } = useSession();
   const [jobPostings, setJobPostings] = useState([]);
 
@@ -41,7 +41,11 @@ const JobPostings = () => {
   }
 
   return (
-    <div className="bg-[#f1f1f1] w-2/3 mx-auto h-fit mt-20 p-5 rounded-md shadow-md">
+    <div
+      className={`${
+        theme === "dark" ? "nav_dark" : "bg-[#f1f1f1]"
+      } w-2/3 mx-auto h-fit mt-20 p-5 rounded-md shadow-md`}
+    >
       <div className="text-2xl font-bold">Job Postings:</div>
       {jobPostings.map((jobPosting) => (
         <div key={jobPosting._id} className="bg-slate-200 rounded-md p-5 my-3">
