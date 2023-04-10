@@ -1,7 +1,7 @@
 import Link from "next/link";
 const NavItem = ({ text, href, active }) => {
   return (
-    <Link href={href}>
+    <Link className="font-bold hover:underline" href={href}>
       <div className={`nav__item ${active ? "active" : ""}`}>{text}</div>
     </Link>
   );

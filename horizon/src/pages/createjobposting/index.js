@@ -36,8 +36,8 @@ const CreateJobPosting = () => {
             return errors;
           }}
           onSubmit={async (values) => {
-            values = { ...values, employer: session.user.companyName };
-            console.log(values);
+            values = { ...values, employerId: session.user._id.toString() };
+            values = { ...values, companyName: session.user.companyName };
             const response = await fetch("/api/jobs/publishJob", {
               method: "POST",
               headers: {

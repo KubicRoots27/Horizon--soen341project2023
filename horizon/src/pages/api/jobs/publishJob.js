@@ -1,6 +1,10 @@
 import connectDB from "database/conn";
 import Jobs from "model/job";
 
+function trimTrailingWhitespace(str) {
+  return str.replace(/\s+$/, "");
+}
+
 export default async function handler(req, res) {
   // connectDB("Users").catch((error) => res.json({ error: error.message }));
 
@@ -11,9 +15,24 @@ export default async function handler(req, res) {
     }
 
     // Destructure the request body
-    let { title, description, location, videoId, salary, employer } = req.body;
+    let {
+      title,
+      description,
+      location,
+      videoId,
+      salary,
+      employerId,
+      companyName,
+    } = req.body;
 
-    console.log(req.body);
+    // Trim trailing whitespace
+    title = trimTrailingWhitespace(title);
+    description = trimTrailingWhitespace(description);
+    location = trimTrailingWhitespace(location);
+    videoId = trimTrailingWhitespace(videoId);
+    salary = trimTrailingWhitespace(salary);
+    employerId = trimTrailingWhitespace(employerId);
+    companyName = trimTrailingWhitespace(companyName);
 
     // Create job and save to database
     Jobs.create(
@@ -23,7 +42,8 @@ export default async function handler(req, res) {
         location,
         videoId,
         salary,
-        employer,
+        employerId,
+        companyName,
       },
       function (err, data) {
         if (err) {

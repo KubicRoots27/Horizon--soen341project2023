@@ -24,7 +24,7 @@ const EmployerDashboard = () => {
 
           if (data.jobs !== undefined) {
             const filteredData = data.jobs.filter(
-              (job) => job.employer === userId
+              (job) => job.employerId === userId
             );
             setJobPostings(filteredData);
           }
@@ -74,7 +74,7 @@ const EmployerDashboard = () => {
   }
 
   return (
-    <div>
+    <div className="h-screen">
       <Card width="w-3/4 lg:w-3/4">
         <div className="text-2xl font-bold text-russian_green">
           Current Job Postings:
@@ -161,6 +161,34 @@ const EmployerDashboard = () => {
                   </button>
                 </div>
               ))}
+            <div className="mt-2">
+              <button
+                className="bg-red-600 font-bold p-1 rounded-md hover:outline outline-2 mr-2"
+                onClick={() => {
+                  const deleteJob = async () => {
+                    const response = await fetch(
+                      `http://localhost:3000/api/jobs/${jobPosting._id}`,
+                      {
+                        method: "DELETE",
+                        headers: {
+                          "Content-Type": "application/json",
+                        },
+                      }
+                    );
+                    const data = await response.json();
+                  };
+                  deleteJob();
+                }}
+              >
+                Delete Job
+              </button>
+
+              <Link href={`/dashboard/employer/edit/${jobPosting._id}`}>
+                <button className="bg-blue-600 font-bold p-1 rounded-md hover:outline outline-2">
+                  Edit Job
+                </button>
+              </Link>
+            </div>
 
             <br />
           </div>

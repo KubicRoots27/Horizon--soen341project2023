@@ -21,7 +21,11 @@ const JobSchema = new Schema({
     type: Number,
     required: true,
   },
-  employer: {
+  employerId: {
+    type: String,
+    required: true,
+  },
+  companyName: {
     type: String,
     required: true,
   },
