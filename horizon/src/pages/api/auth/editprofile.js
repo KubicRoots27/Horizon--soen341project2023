@@ -13,7 +13,7 @@ export default async function handler(req, res) {
         return res.status(400).json({ error: "No request body" });
       }
 
-      // Destructure the request body
+      // Destructure request body
       let { fname, lname, email, password, originalEmail } = req.body;
 
       // Check duplicate user
