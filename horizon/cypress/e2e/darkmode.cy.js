@@ -1,4 +1,4 @@
-describe("Authentication", () => {
+describe("Dark Mode", () => {
   it("Check initial light mode", () => {
     cy.visit("http://localhost:3000/");
 
