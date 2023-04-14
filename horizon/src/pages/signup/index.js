@@ -4,13 +4,17 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 import { useState } from "react";
 
-const Signup = () => {
+const Signup = ({ theme }) => {
   const router = useRouter();
   const [showCompanyNameInput, setShowCompanyNameInput] = useState(false);
 
   return (
-    <div>
-      <div className="flex justify-center bg-lime-600 h-26 p-16">
+    <div
+      className={`${
+        theme === "dark" ? "bg-slate-600" : "bg-lime-600"
+      } h-screen`}
+    >
+      <div className="flex justify-center h-26 p-16">
         <div className="bg-white shadow-md rounded-md p-16 w-1/3 pb-8">
           <h1 className="text-3xl text-center font-bold pb-3">Sign Up</h1>
           <Formik
@@ -185,18 +189,21 @@ const Signup = () => {
                   ) : null}
                 </div>
 
-                <button type="submit" className="focus:shadow-outline rounded bg-lime-600 py-2 px-4 font-bold text-white hover:bg-lime-800 focus:outline-none">
+                <button
+                  type="submit"
+                  className="focus:shadow-outline rounded bg-lime-600 py-2 px-4 font-bold text-white hover:bg-lime-800 focus:outline-none"
+                >
                   Sign up
                 </button>
               </Form>
             )}
           </Formik>
           <div className="w-fit mx-auto pt-12">
-          Already have an account?{" "}
-          <Link className="text-blue-600" href="/login">
-            Login
-          </Link>
-        </div>
+            Already have an account?{" "}
+            <Link className="text-blue-600" href="/login">
+              Login
+            </Link>
+          </div>
         </div>
       </div>
     </div>

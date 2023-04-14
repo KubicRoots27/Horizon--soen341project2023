@@ -1,5 +1,6 @@
+#script for github actions (automates on every commit)
 name: Cypress Tests
-
+ 
 on:
   push:
     branches:
