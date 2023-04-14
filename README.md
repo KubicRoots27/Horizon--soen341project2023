@@ -186,5 +186,5 @@ SPRINT 4
 | Task | Corresponding Story | Person assigned | Task Description |
 | ----------- | ----------- | ----------- | ----------- |
 | 1 | 13 | Christina | Global state that affects the theme|
-| 2 | 14 | Christina |   Using Jest to test endpoints every commit  |
-| 3 |  N/A  | Christina |  Using cypress for unit testing  |
+| 2 | 14 | Christina |   Using Cypress to test endpoints every commit  |
+| 3 |  N/A  | Christina |  Using cypress for end-to-end testing  |
