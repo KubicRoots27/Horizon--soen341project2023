@@ -169,18 +169,19 @@ SPRINT 3
 | 3 |  11 |  Christina | See Student profile through link from application|
 | 4 | 7  |  Christina | Refuse applicant  |
 | 5 | N/A   | Christina | Styling of home page|
-| 6 |   | Mario  | Styling of login page|
+| 6 |  9 | Christina  | Linkedin account link |
 | 7 |  1 | Christina | Improve log in and sign up validation|
 | 8 | N/A  | Christina  | Testing of website, database|
-| 9 |   | Mario | Styling of register page |
-| 10 | 15  | Bachar  | texts size and fonts |
-| 11 |  15 | Bachar  | Styling of click buttons |
-| 12 | 15  | Bachar  | Error messages style |
-| 13 |   |  Arshpreet |Fixing navbar functioning |
+| 9 |  12 | Christina |  Delete home page |
+| 10 |   | Bachar  | texts size and fonts |
+| 11 |  | Bachar  | Styling of click buttons |
+| 12 |   | Bachar  | Error messages style |
+| 13 |   |  Mario  | Styling of login page |
 | 14 |   |  Arshpreet |Styling of navbar |
 | 15 |   |  Arshpreet |Styling of Logo |
 | 16 |   |  Sarmad |styling of Student profile editing page |
 | 17 |   |  Sarmad |styling of job posting page |
+| 18 |   | Mario   | Styling of register page   |
 ## Plan for next Sprint
 SPRINT 4
 | Task | Corresponding Story | Person assigned | Task Description |
